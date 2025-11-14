@@ -28,6 +28,11 @@ const transporter = nodemailer.createTransport({
   },
 })
 
+// Health check PRIMERO
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', message: 'Backend funcionando correctamente' })
+})
+
 // Endpoint de contacto
 app.post('/api/contact', async (req, res) => {
   console.log('📨 Recibida solicitud de contacto:', req.body)
