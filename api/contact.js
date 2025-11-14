@@ -118,23 +118,51 @@ module.exports = async function handler(req, res) {
       `,
     }
 
+    // Verificar credenciales SMTP antes de enviar
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      console.error('❌ Faltan credenciales SMTP')
+      return res.status(500).json({
+        success: false,
+        message: 'Configuración de email incompleta. Contacta al administrador.',
+      })
+    }
+
+    // Verificar conexión SMTP
+    await transporter.verify()
+    console.log('✅ Conexión SMTP verificada')
+
     // Enviar ambos emails
-    await Promise.all([
+    console.log('📧 Enviando emails...')
+    const results = await Promise.all([
       transporter.sendMail(mailToGilberto),
       transporter.sendMail(mailToSender),
     ])
 
-    console.log(`✅ Emails enviados a gilberto.dalesio@gmail.com y ${email}`)
+    console.log(`✅ Emails enviados exitosamente:`)
+    console.log(`   - A Gilberto: ${results[0].messageId}`)
+    console.log(`   - Al cliente (${email}): ${results[1].messageId}`)
 
     res.status(200).json({
       success: true,
       message: 'Mensaje enviado exitosamente',
     })
   } catch (error) {
-    console.error('❌ Error:', error)
+    console.error('❌ Error detallado:', error)
+    console.error('   Code:', error.code)
+    console.error('   Command:', error.command)
+    
+    let errorMessage = 'Error al enviar el mensaje'
+    
+    if (error.code === 'EAUTH') {
+      errorMessage = 'Error de autenticación SMTP. Verifica las credenciales.'
+    } else if (error.code === 'ECONNECTION') {
+      errorMessage = 'Error de conexión con el servidor SMTP.'
+    }
+    
     res.status(500).json({
       success: false,
-      message: 'Error al enviar el mensaje',
+      message: errorMessage,
+      debug: process.env.NODE_ENV === 'development' ? error.message : undefined,
     })
   }
 }
