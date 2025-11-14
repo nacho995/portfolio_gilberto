@@ -31,24 +31,29 @@ docker-compose up -d
 
 El sitio estará en `http://localhost:9000`
 
-## 📧 Formulario de Contacto
+## 📧 Formulario de Contacto con Nodemailer
 
-El formulario usa `mailto:` por defecto. Para usar un backend:
+### Vercel (Ya deployado)
 
-### Opción 1: Formspree (Recomendado)
-1. Ir a https://formspree.io
-2. Crear form gratis
-3. Reemplazar `YOUR_FORM_ID` en `src/components/Contact/Contact.tsx` línea 37
+1. Ve a Vercel → Settings → Environment Variables
+2. Añade:
+   - `SMTP_USER` = tu-email@gmail.com
+   - `SMTP_PASS` = tu-app-password-16-caracteres
+3. Redeploy
 
-### Opción 2: Backend propio
+Ver **`VERCEL_DEPLOYMENT.md`** para guía completa.
+
+### Docker Local
+
 ```bash
-cd server
-npm install
-# Configurar .env con credenciales SMTP
-npm start
+# Con variables de entorno
+docker run -d -p 9000:80 \
+  -e SMTP_USER=tu-email@gmail.com \
+  -e SMTP_PASS=tu-app-password \
+  papa-portfolio_portfolio:latest
 ```
 
-Ver `server/README.md` para detalles.
+Ver **`EMAIL_SETUP.md`** para detalles.
 
 ## 🎨 Características
 
