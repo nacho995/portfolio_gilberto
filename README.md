@@ -41,7 +41,7 @@ El sitio estará en `http://localhost:9000`
    - `SMTP_PASS` = tu-app-password-16-caracteres
 3. Redeploy
 
-Ver **`VERCEL_DEPLOYMENT.md`** para guía completa.
+**Importante**: Usa un App Password de 16 caracteres (sin espacios) generado desde tu cuenta de Gmail.
 
 ### Docker Local
 
@@ -53,20 +53,22 @@ docker run -d -p 9000:80 \
   papa-portfolio_portfolio:latest
 ```
 
-Ver **`EMAIL_SETUP.md`** para detalles.
+**Nota**: Los archivos de documentación detallada han sido eliminados para mantener el proyecto limpio. Toda la configuración necesaria está en este README.
 
 ## 🎨 Características
 
+- **🌍 Bilingüe (Español/Inglés)** con detección automática del idioma del navegador
 - Portfolio académico de élite
 - 10 secciones con backgrounds multi-capa
-- Animaciones premium
+- Animaciones premium con Framer Motion
 - Glassmorphism effects
 - Stats counters animados
 - Mapa interactivo global
 - Syllabus expandibles
 - Bento grid asimétrico
 - Responsive design
-- Formulario de contacto
+- Formulario de contacto con Nodemailer
+- **Persistencia de preferencia de idioma** en localStorage
 
 ## 📝 Personalización
 
