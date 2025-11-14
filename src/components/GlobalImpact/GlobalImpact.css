@@ -1,0 +1,319 @@
+.global-impact {
+  min-height: 100vh;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: 
+    /* Capa 1: Europa - Azul corporate */
+    radial-gradient(ellipse 950px 750px at 48% 25%, 
+      rgba(11, 61, 145, 0.22) 0%,
+      rgba(21, 87, 176, 0.13) 35%,
+      rgba(30, 106, 189, 0.06) 65%,
+      transparent 80%),
+    /* Capa 2: Asia - Verde growth */
+    radial-gradient(ellipse 900px 700px at 75% 35%, 
+      rgba(0, 133, 111, 0.20) 0%,
+      rgba(0, 163, 137, 0.12) 35%,
+      rgba(27, 153, 139, 0.05) 65%,
+      transparent 80%),
+    /* Capa 3: LATAM - Dorado heritage */
+    radial-gradient(ellipse 850px 650px at 22% 60%, 
+      rgba(212, 175, 55, 0.18) 0%,
+      rgba(230, 201, 104, 0.10) 35%,
+      rgba(255, 215, 0, 0.04) 65%,
+      transparent 80%),
+    /* Capa 4: MENA - Burgundy tradition */
+    radial-gradient(circle 700px at 58% 40%, 
+      rgba(139, 0, 0, 0.12) 0%,
+      rgba(165, 42, 42, 0.06) 45%,
+      transparent 75%),
+    /* Capa 5: África - Silver opportunity */
+    radial-gradient(circle 600px at 50% 75%, 
+      rgba(192, 192, 192, 0.10) 0%,
+      rgba(211, 211, 211, 0.05) 50%,
+      transparent 75%),
+    /* Capa 6: Rutas comerciales */
+    repeating-linear-gradient(60deg,
+      transparent,
+      transparent 160px,
+      rgba(0, 133, 111, 0.018) 160px,
+      rgba(0, 133, 111, 0.018) 161px),
+    repeating-linear-gradient(-60deg,
+      transparent,
+      transparent 160px,
+      rgba(11, 61, 145, 0.016) 160px,
+      rgba(11, 61, 145, 0.016) 161px),
+    /* Capa 7: Red de mercados */
+    repeating-linear-gradient(30deg,
+      transparent,
+      transparent 135px,
+      rgba(212, 175, 55, 0.014) 135px,
+      rgba(212, 175, 55, 0.014) 136px),
+    /* Capa 8: Pins globales */
+    radial-gradient(circle 6px at 48% 25%, rgba(11, 61, 145, 0.6), transparent),
+    radial-gradient(circle 6px at 75% 35%, rgba(0, 133, 111, 0.6), transparent),
+    radial-gradient(circle 5px at 22% 60%, rgba(212, 175, 55, 0.6), transparent),
+    radial-gradient(circle 5px at 58% 40%, rgba(139, 0, 0, 0.5), transparent),
+    radial-gradient(circle 4px at 50% 75%, rgba(192, 192, 192, 0.5), transparent),
+    /* Capa 9: Base mundial premium */
+    linear-gradient(140deg, 
+      rgba(248, 249, 250, 1) 0%,
+      rgba(255, 255, 255, 0.97) 20%,
+      rgba(250, 251, 252, 0.94) 40%,
+      rgba(245, 247, 250, 0.96) 60%,
+      rgba(248, 249, 250, 0.98) 80%,
+      rgba(255, 255, 255, 1) 100%);
+  position: relative;
+  animation: globalRadiance 52s ease-in-out infinite;
+  background-size: 
+    950px 750px,
+    900px 700px,
+    850px 650px,
+    700px 700px,
+    600px 600px,
+    320px 320px,
+    320px 320px,
+    270px 270px,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+}
+
+@keyframes globalRadiance {
+  0%, 100% {
+    background-position: 
+      48% 25%, 75% 35%, 22% 60%, 58% 40%, 50% 75%,
+      0 0, 0 0, 0 0,
+      48% 25%, 75% 35%, 22% 60%, 58% 40%, 50% 75%,
+      0 0;
+  }
+  33% {
+    background-position: 
+      52% 30%, 70% 40%, 26% 55%, 62% 35%, 55% 70%,
+      53px 53px, 53px 53px, 45px 45px,
+      52% 30%, 70% 40%, 26% 55%, 62% 35%, 55% 70%,
+      0 0;
+  }
+  66% {
+    background-position: 
+      44% 30%, 80% 40%, 18% 65%, 54% 45%, 45% 80%,
+      106px 106px, 106px 106px, 90px 90px,
+      44% 30%, 80% 40%, 18% 65%, 54% 45%, 45% 80%,
+      0 0;
+  }
+}
+
+.global-impact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-academic);
+  box-shadow: 
+    0 5px 35px rgba(11, 61, 145, 0.5),
+    0 3px 18px rgba(0, 133, 111, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+.global-impact::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle,
+    rgba(0, 133, 111, 0.15) 0%,
+    rgba(0, 163, 137, 0.10) 25%,
+    rgba(27, 153, 139, 0.06) 50%,
+    rgba(212, 175, 55, 0.04) 75%,
+    transparent 100%);
+  border-radius: 50%;
+  filter: blur(120px);
+  animation: worldOrb 38s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes worldOrb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translate(50px, -30px) scale(1.08) rotate(90deg);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translate(-40px, 40px) scale(1.15) rotate(180deg);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translate(30px, -20px) scale(1.05) rotate(270deg);
+    opacity: 0.85;
+  }
+}
+
+.global-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.global-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.global-header h2 {
+  font-family: var(--font-display);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.world-map-container {
+  position: relative;
+  height: 600px;
+  margin-bottom: var(--spacing-xl);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.world-map-background {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(135deg, rgba(11, 61, 145, 0.05), rgba(0, 133, 111, 0.05)),
+    url('data:image/svg+xml,<svg width="1000" height="600" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(11,61,145,0.1)" stroke-width="1"/></pattern></defs><rect width="1000" height="600" fill="url(%23grid)"/></svg>');
+  border-radius: 24px;
+  border: 2px solid var(--color-neutral-300);
+}
+
+.region-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.pin-marker {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-primary);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: var(--shadow-lg);
+  animation: pulsePrestige 2s ease-in-out infinite;
+}
+
+.pin-marker svg {
+  transform: rotate(45deg);
+}
+
+.region-tooltip {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 280px;
+  padding: var(--spacing-md);
+  border-radius: 16px;
+  opacity: 0;
+  transition: all var(--transition-base);
+  pointer-events: none;
+  z-index: 20;
+}
+
+.region-pin:hover .region-tooltip {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+
+.tooltip-icon {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.region-tooltip h4 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
+.tooltip-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: var(--spacing-sm);
+  gap: var(--spacing-sm);
+}
+
+.stat-mini {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.region-tooltip p {
+  color: var(--color-neutral-700);
+  line-height: 1.6;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.connection-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.global-summary {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.summary-icon {
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-md);
+  animation: floatAcademic 4s ease-in-out infinite;
+}
+
+.summary-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--color-neutral-700);
+}
+
+.summary-text strong {
+  color: var(--university-burgundy);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .global-impact {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .world-map-container {
+    height: 400px;
+  }
+
+  .region-tooltip {
+    width: 220px;
+  }
+}
+

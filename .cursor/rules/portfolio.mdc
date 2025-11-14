@@ -1,0 +1,14 @@
+---
+description: >
+  Crear un proyecto con React que funcione como portfolio profesional basado en la experiencia e identidad de la persona cuyo perfil es https://www.linkedin.com/in/gilbertodalesio/.
+
+rules:
+  - El proyecto será realizado por un grupo de desarrolladores y diseñadores senior que colaboran estrechamente.
+  - Para cada funcionalidad, sección o componente, el equipo debe discutir y decidir cuál es el diseño más sofisticado, poco convencional y creativo, inspirándose en los estándares visuales y de interacción de los diseños de Cursor realizados por Gilberto Dalesio.
+  - Se debe poner especial énfasis en la imaginación y originalidad, procurando que el resultado sea muy profesional, creativo e impresionante, mostrando lo que un equipo senior puede lograr.
+  - La presentación visual y la experiencia de usuario deben estar cuidadas al máximo detalle, priorizando métodos de diseño innovadores y poco comunes.
+  - Documentar las decisiones de diseño y justificar brevemente en cada caso por qué se optó por la solución elegida, reforzando el objetivo de sofisticación y diferenciación del portfolio.
+alwaysApply: true
+---
+alwaysApply: true
+---

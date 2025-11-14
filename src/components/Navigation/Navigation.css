@@ -1,0 +1,122 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-navigation);
+  padding: var(--spacing-md) var(--spacing-lg);
+  transition: background-color var(--transition-base), backdrop-filter var(--transition-base);
+  background: var(--color-bg-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.navigation.scrolled {
+  background-color: var(--overlay-light);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid var(--color-secondary); /* Verde Esmeralda */
+  box-shadow: var(--shadow-md);
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color-primary); /* Azul Profundo - Autoridad */
+  font-family: var(--font-display);
+  transition: color var(--transition-fast);
+}
+
+.nav-logo:hover {
+  color: var(--color-secondary); /* Verde Esmeralda */
+}
+
+.nav-desktop {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-text-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-mobile {
+  overflow: hidden;
+  padding-top: var(--spacing-md);
+}
+
+.nav-mobile-link {
+  display: block;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.25rem;
+  padding: var(--spacing-sm) 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-mobile-link:hover {
+  color: var(--color-text-primary);
+}
+
+.nav-mobile-lang {
+  padding: var(--spacing-md) 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+

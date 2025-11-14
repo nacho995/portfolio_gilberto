@@ -1,0 +1,301 @@
+.education {
+  min-height: 80vh;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: 
+    /* Capa 1: Corona dorada de Suma Cum Laude */
+    radial-gradient(ellipse 1050px 850px at 50% 35%, 
+      rgba(212, 175, 55, 0.25) 0%,
+      rgba(230, 201, 104, 0.15) 30%,
+      rgba(255, 215, 0, 0.08) 55%,
+      rgba(255, 223, 0, 0.04) 75%,
+      transparent 90%),
+    /* Capa 2: Burgundy universitario prestigioso */
+    radial-gradient(ellipse 900px 750px at 25% 70%, 
+      rgba(139, 0, 0, 0.16) 0%,
+      rgba(165, 42, 42, 0.09) 40%,
+      rgba(178, 34, 34, 0.04) 65%,
+      transparent 80%),
+    /* Capa 3: Azul académico UBA */
+    radial-gradient(circle 700px at 75% 60%, 
+      rgba(11, 61, 145, 0.14) 0%,
+      rgba(21, 87, 176, 0.08) 45%,
+      rgba(30, 106, 189, 0.04) 70%,
+      transparent 85%),
+    /* Capa 4: Verde London Business School */
+    radial-gradient(circle 600px at 40% 40%, 
+      rgba(0, 133, 111, 0.10) 0%,
+      rgba(0, 163, 137, 0.05) 50%,
+      transparent 75%),
+    /* Capa 5: Silver académico */
+    radial-gradient(circle 500px at 65% 25%, 
+      rgba(192, 192, 192, 0.08) 0%,
+      rgba(211, 211, 211, 0.04) 50%,
+      transparent 70%),
+    /* Capa 6: Patrón de diplomas */
+    repeating-linear-gradient(30deg,
+      transparent,
+      transparent 145px,
+      rgba(212, 175, 55, 0.018) 145px,
+      rgba(212, 175, 55, 0.018) 146px),
+    repeating-linear-gradient(150deg,
+      transparent,
+      transparent 145px,
+      rgba(139, 0, 0, 0.015) 145px,
+      rgba(139, 0, 0, 0.015) 146px),
+    /* Capa 7: Grid académico */
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 115px,
+      rgba(11, 61, 145, 0.012) 115px,
+      rgba(11, 61, 145, 0.012) 116px),
+    /* Capa 8: Puntos de excelencia */
+    radial-gradient(circle 6px at 30% 35%, rgba(212, 175, 55, 0.6), transparent),
+    radial-gradient(circle 5px at 70% 65%, rgba(139, 0, 0, 0.5), transparent),
+    radial-gradient(circle 4px at 50% 75%, rgba(192, 192, 192, 0.4), transparent),
+    /* Capa 9: Base universitaria premium */
+    linear-gradient(135deg, 
+      rgba(255, 255, 255, 1) 0%,
+      rgba(250, 251, 252, 0.98) 25%,
+      rgba(248, 249, 250, 0.95) 50%,
+      rgba(245, 247, 250, 0.97) 75%,
+      rgba(255, 255, 255, 1) 100%);
+  position: relative;
+  animation: educationExcellence 44s ease-in-out infinite;
+  background-size: 
+    1050px 850px,
+    900px 750px,
+    700px 700px,
+    600px 600px,
+    500px 500px,
+    290px 290px,
+    290px 290px,
+    115px 115px,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+}
+
+@keyframes educationExcellence {
+  0%, 100% {
+    background-position: 
+      50% 35%, 25% 70%, 75% 60%, 40% 40%, 65% 25%,
+      0 0, 0 0, 0 0,
+      30% 35%, 70% 65%, 50% 75%,
+      0 0;
+  }
+  33% {
+    background-position: 
+      55% 40%, 30% 65%, 70% 65%, 45% 35%, 70% 30%,
+      48px 48px, 48px 48px, 38px 38px,
+      35% 40%, 65% 60%, 55% 70%,
+      0 0;
+  }
+  66% {
+    background-position: 
+      45% 40%, 20% 75%, 80% 55%, 35% 45%, 60% 30%,
+      96px 96px, 96px 96px, 76px 76px,
+      40% 30%, 75% 70%, 45% 80%,
+      0 0;
+  }
+}
+
+.education::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-university);
+  box-shadow: 
+    0 5px 35px rgba(139, 0, 0, 0.5),
+    0 3px 18px rgba(212, 175, 55, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+.education::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle,
+    rgba(139, 0, 0, 0.14) 0%,
+    rgba(165, 42, 42, 0.10) 25%,
+    rgba(212, 175, 55, 0.06) 55%,
+    rgba(230, 201, 104, 0.03) 75%,
+    transparent 100%);
+  border-radius: 50%;
+  filter: blur(95px);
+  animation: sumaCumLaudeGlow 28s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes sumaCumLaudeGlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(35px, -40px) scale(1.15);
+    opacity: 1;
+  }
+}
+
+.education-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.education-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.education-header h2 {
+  font-family: var(--font-display);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.education-card {
+  background: var(--color-bg-primary);
+  border: 2px solid var(--color-bg-tertiary);
+  border-radius: 16px;
+  padding: var(--spacing-lg);
+  transition: all var(--transition-base);
+}
+
+.education-card:hover {
+  border-color: var(--color-accent-2);
+  box-shadow: 0 20px 60px rgba(36, 123, 160, 0.15);
+  transform: translateY(-5px);
+}
+
+.education-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  color: #ffffff;
+  margin-bottom: var(--spacing-md);
+}
+
+.education-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.education-institution {
+  font-size: 1.2rem;
+  color: var(--color-secondary); /* Verde Esmeralda - Prestigio académico */
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.education-distinction {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-accent); /* Dorado Premium - Excelencia */
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  background: var(--color-premium-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--color-accent);
+  width: fit-content;
+}
+
+.education-focus {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+}
+
+.education-description {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.education-additional {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.additional-card {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-bg-tertiary);
+  border-radius: 12px;
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-sm);
+  color: var(--color-secondary); /* Verde Esmeralda */
+  transition: all var(--transition-base);
+}
+
+.additional-card:hover {
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.additional-card h4 {
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.additional-card p {
+  color: var(--color-text-secondary);
+}
+
+.education-highlight {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.education-highlight blockquote {
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  padding: var(--spacing-lg);
+  border-left: 4px solid var(--color-accent-1);
+  background: var(--color-bg-primary);
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-highlight blockquote {
+    font-size: 1.1rem;
+  }
+}
+
