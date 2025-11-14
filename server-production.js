@@ -16,18 +16,22 @@ app.use(express.json())
 app.use(express.static(join(__dirname, 'dist')))
 
 // Configuración de Nodemailer
+// IMPORTANTE: Usa TU cuenta Gmail con TU App Password
+// Los emails se enviarán DESDE tu cuenta PERO aparecerán como de Gilberto
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || 'smtp.gmail.com',
   port: parseInt(process.env.SMTP_PORT || '587'),
   secure: false,
   auth: {
-    user: process.env.SMTP_USER || 'gilberto.dalesio@gmail.com',
-    pass: process.env.SMTP_PASS || '',
+    user: process.env.SMTP_USER, // TU email (ej: tu-email@gmail.com)
+    pass: process.env.SMTP_PASS, // TU App Password
   },
 })
 
 // Endpoint de contacto
 app.post('/api/contact', async (req, res) => {
+  console.log('📨 Recibida solicitud de contacto:', req.body)
+  
   try {
     const { name, email, message } = req.body
 
@@ -48,9 +52,9 @@ app.post('/api/contact', async (req, res) => {
 
     // Email 1: Para Gilberto con los detalles - DISEÑO PREMIUM
     const mailToGilberto = {
-      from: `"Portfolio Contact" <${process.env.SMTP_USER || 'gilberto.dalesio@gmail.com'}>`,
-      to: process.env.CONTACT_EMAIL || 'gilberto.dalesio@gmail.com',
-      replyTo: email,
+      from: `"Gilberto Dalesio Portfolio" <${process.env.SMTP_USER}>`, // Se envía desde TU cuenta
+      to: 'gilberto.dalesio@gmail.com', // Llegará a Gilberto
+      replyTo: email, // Cuando Gilberto responda, irá directo al cliente
       subject: `✨ Nueva Consulta Ejecutiva de ${name}`,
       html: `
         <!DOCTYPE html>
@@ -120,8 +124,9 @@ app.post('/api/contact', async (req, res) => {
 
     // Email 2: Confirmación PREMIUM para quien envió el formulario
     const mailToSender = {
-      from: `"Gilberto Dalesio Delpini" <${process.env.SMTP_USER || 'gilberto.dalesio@gmail.com'}>`,
-      to: email,
+      from: `"Gilberto Dalesio Delpini" <${process.env.SMTP_USER}>`, // Se envía desde TU cuenta PERO aparece como Gilberto
+      to: email, // Al cliente
+      replyTo: 'gilberto.dalesio@gmail.com', // Si el cliente responde, va a Gilberto
       subject: '✅ Consulta Recibida - Gilberto Dalesio Delpini',
       html: `
         <!DOCTYPE html>
@@ -223,10 +228,13 @@ app.post('/api/contact', async (req, res) => {
     }
 
     // Enviar ambos emails
+    console.log('📧 Enviando emails...')
     await Promise.all([
       transporter.sendMail(mailToGilberto),
       transporter.sendMail(mailToSender),
     ])
+    
+    console.log(`✅ Emails enviados exitosamente a ${email} y gilberto.dalesio@gmail.com`)
 
     res.status(200).json({
       success: true,
@@ -249,5 +257,8 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`)
   console.log(`📧 Email: ${process.env.SMTP_USER || 'gilberto.dalesio@gmail.com'}`)
+  console.log(`🌐 Frontend served from: /dist`)
+  console.log(`📬 API endpoint: POST /api/contact`)
+  console.log(`💚 Health check: GET /api/health`)
 })
 
