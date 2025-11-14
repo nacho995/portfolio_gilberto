@@ -3,15 +3,15 @@ export const translations = {
     nav: {
       home: 'Inicio',
       expertise: 'Expertise',
-      teaching: 'Teaching',
-      experience: 'Experience',
-      globalImpact: 'Global Impact',
-      research: 'Research',
+      teaching: 'Docencia',
+      experience: 'Experiencia',
+      globalImpact: 'Impacto Global',
+      research: 'Investigación',
       contact: 'Contacto',
     },
     hero: {
       name: 'Gilberto Dalesio Delpini',
-      subtitle: 'Global Executive Leader | Life Sciences & MedTech Transformation',
+      subtitle: 'Líder Ejecutivo Global | Transformación en Ciencias de la Vida y MedTech',
       tagline: '30+ años impulsando transformación, crecimiento y creación de valor sostenible en farmacéuticas y ciencias de la vida a nivel global',
       ctaPrimary: 'Conectar en LinkedIn',
       ctaSecondary: 'Consultoría Ejecutiva',
@@ -61,7 +61,7 @@ export const translations = {
         success: '¡Mensaje enviado exitosamente! Te contactaré pronto.',
         error: 'Error al enviar. Por favor intenta de nuevo o contacta directamente por LinkedIn.',
       },
-      footer: '© 2024 Gilberto Dalesio Delpini. Executive Consulting & Board Advisory.',
+      footer: '© 2024 Gilberto Dalesio Delpini. Consultoría Ejecutiva y Asesoría de Juntas.',
     },
   },
   en: {
@@ -133,4 +133,3 @@ export const translations = {
 
 export type Language = 'es' | 'en'
 export type TranslationKey = keyof typeof translations.es
-
