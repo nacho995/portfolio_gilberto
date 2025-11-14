@@ -9,8 +9,14 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+      - PORT=80
+      - SMTP_HOST=${SMTP_HOST:-smtp.gmail.com}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_USER=${SMTP_USER:-gilberto.dalesio@gmail.com}
+      - SMTP_PASS=${SMTP_PASS}
+      - CONTACT_EMAIL=${CONTACT_EMAIL:-gilberto.dalesio@gmail.com}
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:80/"]
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
       interval: 30s
       timeout: 3s
       retries: 3

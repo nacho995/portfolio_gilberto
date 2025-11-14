@@ -35,8 +35,7 @@ const Contact = () => {
     setSubmitStatus('idle')
 
     try {
-      // Opción 1: Usar Formspree (servicio gratuito)
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,25 +43,19 @@ const Contact = () => {
         body: JSON.stringify(formData),
       })
 
-      if (response.ok) {
+      const data = await response.json()
+
+      if (response.ok && data.success) {
         setSubmitStatus('success')
         setFormData({ name: '', email: '', message: '' })
         setTimeout(() => setSubmitStatus('idle'), 5000)
       } else {
-        // Fallback: abrir mailto
-        const mailtoLink = `mailto:gilberto.dalesio@gmail.com?subject=Consulta de ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`)}`
-        window.location.href = mailtoLink
-        setSubmitStatus('success')
-        setFormData({ name: '', email: '', message: '' })
-        setTimeout(() => setSubmitStatus('idle'), 3000)
+        setSubmitStatus('error')
+        console.error('Error:', data.message)
       }
     } catch (error) {
+      setSubmitStatus('error')
       console.error('Error al enviar:', error)
-      // Fallback: abrir mailto
-      const mailtoLink = `mailto:gilberto.dalesio@executive-consulting.com?subject=Consulta de ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`)}`
-      window.location.href = mailtoLink
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', message: '' })
     } finally {
       setIsSubmitting(false)
     }
