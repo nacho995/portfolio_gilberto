@@ -1,67 +1,18 @@
 import { motion } from 'framer-motion'
-import { Workflow, Globe2, Handshake, BarChart3, Heart, Users2, Zap, Target } from 'lucide-react'
+import { Workflow, Globe2, Handshake, Users2 } from 'lucide-react'
+import { useLanguage } from '@hooks/useLanguage'
 import './Consulting.css'
 
-const consultingAreas = [
-  {
-    id: '1',
-    icon: Workflow,
-    title: 'Transformación Organizacional',
-    description: 'Rediseño de estructuras, procesos y cultura para maximizar eficiencia operacional y adaptabilidad al cambio.',
-    keywords: ['Change Management', 'Organizational Design', 'Process Optimization'],
-  },
-  {
-    id: '2',
-    icon: Globe2,
-    title: 'Expansión Internacional',
-    description: 'Estrategias de entrada a nuevos mercados, análisis de oportunidades y gestión de operaciones globales.',
-    keywords: ['Market Entry', 'International Growth', 'Business Development'],
-  },
-  {
-    id: '3',
-    icon: Handshake,
-    title: 'M&A & Post-Merger Integration',
-    description: 'Due diligence estratégico, gestión de fusiones y adquisiciones, e integración operacional post-transacción.',
-    keywords: ['M&A Strategy', 'PMI', 'Synergy Realization'],
-  },
-  {
-    id: '4',
-    icon: BarChart3,
-    title: 'Estrategia Comercial Global',
-    description: 'Desarrollo de estrategias go-to-market, optimización de canales y gestión de P&L con impacto internacional.',
-    keywords: ['Commercial Excellence', 'P&L Management', 'Sales Strategy'],
-  },
-  {
-    id: '5',
-    icon: Heart,
-    title: 'Life Sciences & MedTech Advisory',
-    description: 'Consultoría especializada en industria farmacéutica, biotecnología y dispositivos médicos.',
-    keywords: ['Pharma', 'Regulatory Affairs', 'MedTech Innovation'],
-  },
-  {
-    id: '6',
-    icon: Users2,
-    title: 'Desarrollo de Liderazgo',
-    description: 'Formación de equipos ejecutivos, coaching de alta dirección y programas de desarrollo de liderazgo.',
-    keywords: ['Executive Coaching', 'Talent Development', 'Leadership Programs'],
-  },
-  {
-    id: '7',
-    icon: Zap,
-    title: 'Innovación & Transformación Digital',
-    description: 'Implementación de tecnologías disruptivas, digitalización de procesos y modelos de negocio innovadores.',
-    keywords: ['Digital Strategy', 'Innovation Management', 'Technology Adoption'],
-  },
-  {
-    id: '8',
-    icon: Target,
-    title: 'Board Advisory & Governance',
-    description: 'Asesoría a juntas directivas en toma de decisiones estratégicas, gobierno corporativo y gestión de riesgos.',
-    keywords: ['Board Strategy', 'Corporate Governance', 'Risk Management'],
-  },
-]
-
 const Consulting = () => {
+  const { t } = useLanguage()
+
+  const consultingAreas = [
+    { id: '1', icon: Users2, key: 'board' as const },
+    { id: '2', icon: Workflow, key: 'transformation' as const },
+    { id: '3', icon: Handshake, key: 'mna' as const },
+    { id: '4', icon: Globe2, key: 'international' as const },
+  ]
+
   return (
     <section id="consulting" className="consulting">
       <div className="consulting-container">
@@ -72,12 +23,11 @@ const Consulting = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-display">Áreas de Consultoría</h2>
-          <p className="text-body">
-            Servicios de consultoría ejecutiva especializados en transformación empresarial
-            y liderazgo estratégico
-          </p>
+          <h2 className="text-display">{t.consulting.title}</h2>
+          <p className="text-body">{t.consulting.subtitle}</p>
         </motion.div>
+
+        <p className="consulting-intro">{t.consulting.intro}</p>
 
         <div className="consulting-grid">
           {consultingAreas.map((area, index) => (
@@ -92,14 +42,15 @@ const Consulting = () => {
               <div className="consulting-icon">
                 <area.icon size={32} />
               </div>
-              <h3 className="consulting-title">{area.title}</h3>
-              <p className="consulting-description">{area.description}</p>
+              <h3 className="consulting-title">{t.consulting.services[area.key].title}</h3>
+              <p className="consulting-description">{t.consulting.services[area.key].description}</p>
               <div className="consulting-keywords">
-                {area.keywords.map(keyword => (
-                  <span key={keyword} className="keyword-tag">
-                    {keyword}
-                  </span>
-                ))}
+                <h4>Deliverables:</h4>
+                <ul>
+                  {t.consulting.services[area.key].deliverables.map((deliverable: string, idx: number) => (
+                    <li key={idx}>{deliverable}</li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           ))}

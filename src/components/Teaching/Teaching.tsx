@@ -1,61 +1,18 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BookOpen, Users, Award, ChevronDown, ChevronUp } from 'lucide-react'
+import { useLanguage } from '@hooks/useLanguage'
 import './Teaching.css'
-
-const courses = [
-  {
-    id: '1',
-    title: 'Strategic Management in Life Sciences',
-    level: 'MBA / Executive MBA',
-    description: 'Estrategias competitivas y gestión en industrias altamente reguladas',
-    topics: [
-      'Competitive Strategy in Pharmaceutical Industry',
-      'Regulatory Environment & Strategic Planning',
-      'Innovation Management in MedTech',
-      'Global Market Entry Strategies',
-    ],
-  },
-  {
-    id: '2',
-    title: 'Mergers & Acquisitions',
-    level: 'MBA / DBA',
-    description: 'Teoría y práctica de M&A con casos reales de la industria',
-    topics: [
-      'M&A Strategy & Deal Structuring',
-      'Due Diligence & Valuation',
-      'Post-Merger Integration (PMI)',
-      'Case Study: SIFI → Faes Farma Acquisition',
-    ],
-  },
-  {
-    id: '3',
-    title: 'International Business Development',
-    level: 'MBA',
-    description: 'Expansión global y gestión de operaciones multinacionales',
-    topics: [
-      'Global Market Analysis',
-      'Cross-Cultural Management',
-      'International P&L Management',
-      'Emerging Markets Strategy',
-    ],
-  },
-  {
-    id: '4',
-    title: 'Executive Leadership & Transformation',
-    level: 'Executive Education',
-    description: 'Liderazgo transformacional en organizaciones complejas',
-    topics: [
-      'Organizational Transformation',
-      'Change Management',
-      'Team Leadership at Scale',
-      'Performance Management Systems',
-    ],
-  },
-]
 
 const Teaching = () => {
   const [expandedCourse, setExpandedCourse] = useState<string | null>(null)
+  const { t } = useLanguage()
+
+  const courses = [
+    { id: 'strategic', key: 'strategic' as const },
+    { id: 'mna', key: 'mna' as const },
+    { id: 'international', key: 'international' as const },
+  ]
 
   return (
     <section id="teaching" className="teaching">
@@ -67,24 +24,15 @@ const Teaching = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-display">Academic Offerings</h2>
-          <p className="text-body">
-            Cursos diseñados para conectar teoría estratégica con práctica ejecutiva real
-          </p>
+          <h2 className="text-display">{t.teaching.title}</h2>
+          <p className="text-body">{t.teaching.subtitle}</p>
         </motion.div>
 
         <div className="teaching-philosophy glass-academic">
           <div className="philosophy-icon">
             <BookOpen size={48} />
           </div>
-          <h3>Teaching Philosophy</h3>
-          <p className="philosophy-statement">
-            "Mi enfoque pedagógico se fundamenta en el <strong>método de casos</strong> basado en
-            experiencias reales de transformación empresarial. Creo que el aprendizaje más profundo
-            ocurre cuando la teoría estratégica se confronta con la complejidad del mundo real.
-            Cada sesión combina rigor académico con insights prácticos de 30+ años liderando
-            organizaciones globales en sectores altamente regulados."
-          </p>
+          <h3>{t.teaching.intro}</h3>
           <div className="philosophy-pillars">
             <div className="pillar-item">
               <Users size={24} />
@@ -101,6 +49,8 @@ const Teaching = () => {
           </div>
         </div>
 
+        <h3 className="courses-title">{t.teaching.coursesTitle}</h3>
+
         <div className="courses-grid">
           {courses.map((course, index) => (
             <motion.div
@@ -113,8 +63,8 @@ const Teaching = () => {
             >
               <div className="course-header">
                 <div>
-                  <h3 className="course-title">{course.title}</h3>
-                  <span className="course-level">{course.level}</span>
+                  <h3 className="course-title">{t.teaching.courses[course.key].title}</h3>
+                  <span className="course-level">{t.teaching.courses[course.key].institution}</span>
                 </div>
                 <motion.button
                   className="course-toggle"
@@ -130,7 +80,7 @@ const Teaching = () => {
                 </motion.button>
               </div>
 
-              <p className="course-description">{course.description}</p>
+              <p className="course-description">{t.teaching.courses[course.key].description}</p>
 
               <AnimatePresence>
                 {expandedCourse === course.id && (
@@ -141,11 +91,11 @@ const Teaching = () => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <h4>Syllabus Highlights:</h4>
+                    <h4>{t.teaching.courses[course.key].syllabus}</h4>
                     <ul>
-                      {course.topics.map(topic => (
+                      {t.teaching.courses[course.key].topics.map((topic: string, idx: number) => (
                         <motion.li
-                          key={topic}
+                          key={idx}
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.3 }}

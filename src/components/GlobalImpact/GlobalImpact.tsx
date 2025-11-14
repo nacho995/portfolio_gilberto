@@ -1,58 +1,39 @@
 import { motion } from 'framer-motion'
 import { Globe, MapPin, TrendingUp, Users } from 'lucide-react'
 import { useInView } from '@hooks/useInView'
+import { useLanguage } from '@hooks/useLanguage'
 import './GlobalImpact.css'
-
-const regions = [
-  {
-    id: '1',
-    name: 'Europa',
-    icon: '🇪🇺',
-    years: '15+',
-    projects: '40+',
-    impact: 'Liderazgo de expansión en 12 países, transformación de operaciones Alcon',
-    position: { top: '25%', left: '48%' },
-  },
-  {
-    id: '2',
-    name: 'Asia',
-    icon: '🌏',
-    years: '10+',
-    projects: '25+',
-    impact: 'Entrada a mercados emergentes, gestión de equipos multinacionales',
-    position: { top: '35%', left: '75%' },
-  },
-  {
-    id: '3',
-    name: 'Medio Oriente',
-    icon: '🕌',
-    years: '8+',
-    projects: '20+',
-    impact: 'Desarrollo de estrategias regionales, expansión en MENA',
-    position: { top: '40%', left: '58%' },
-  },
-  {
-    id: '4',
-    name: 'África',
-    icon: '🌍',
-    years: '6+',
-    projects: '15+',
-    impact: 'Proyectos de acceso a medicamentos, desarrollo de mercados',
-    position: { top: '55%', left: '50%' },
-  },
-  {
-    id: '5',
-    name: 'Latinoamérica',
-    icon: '🌎',
-    years: '20+',
-    projects: '35+',
-    impact: 'Origen profesional, liderazgo regional extensivo',
-    position: { top: '60%', left: '22%' },
-  },
-]
 
 const GlobalImpact = () => {
   const { ref, isInView } = useInView({ threshold: 0.2, triggerOnce: true })
+  const { t } = useLanguage()
+
+  const regions = [
+    {
+      id: '1',
+      key: 'europe' as const,
+      icon: '🇪🇺',
+      position: { top: '25%', left: '48%' },
+    },
+    {
+      id: '2',
+      key: 'mena' as const,
+      icon: '🕌',
+      position: { top: '40%', left: '58%' },
+    },
+    {
+      id: '3',
+      key: 'latam' as const,
+      icon: '🌎',
+      position: { top: '60%', left: '22%' },
+    },
+    {
+      id: '4',
+      key: 'asia' as const,
+      icon: '🌏',
+      position: { top: '35%', left: '75%' },
+    },
+  ]
 
   return (
     <section id="global-impact" className="global-impact" ref={ref as any}>
@@ -64,10 +45,8 @@ const GlobalImpact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-display">Global Impact</h2>
-          <p className="text-body">
-            Transformando organizaciones en cuatro continentes con liderazgo estratégico probado
-          </p>
+          <h2 className="text-display">{t.globalImpact.title}</h2>
+          <p className="text-body">{t.globalImpact.subtitle}</p>
         </motion.div>
 
         <div className="world-map-container">
@@ -91,18 +70,22 @@ const GlobalImpact = () => {
               </div>
               <div className="region-tooltip glass-academic">
                 <div className="tooltip-icon">{region.icon}</div>
-                <h4>{region.name}</h4>
+                <h4>{t.globalImpact.regions[region.key].title}</h4>
                 <div className="tooltip-stats">
                   <div className="stat-mini">
                     <TrendingUp size={16} />
-                    <span>{region.years} años</span>
+                    <span>{t.globalImpact.regions[region.key].years}</span>
                   </div>
                   <div className="stat-mini">
                     <Users size={16} />
-                    <span>{region.projects} proyectos</span>
+                    <span>{t.globalImpact.regions[region.key].description}</span>
                   </div>
                 </div>
-                <p>{region.impact}</p>
+                <ul>
+                  {t.globalImpact.regions[region.key].highlights.map((highlight: string, idx: number) => (
+                    <li key={idx}>{highlight}</li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           ))}
@@ -145,11 +128,7 @@ const GlobalImpact = () => {
           transition={{ delay: 1.5, duration: 0.6 }}
         >
           <Globe size={40} className="summary-icon" />
-          <p className="summary-text">
-            <strong>Impacto Global Comprobado:</strong> Gestión de operaciones en 50+ mercados,
-            liderazgo de equipos multiculturales de 1000+ personas, y responsabilidad P&L de
-            múltiples millones de euros en sectores altamente regulados.
-          </p>
+          <p className="summary-text">{t.globalImpact.intro}</p>
         </motion.div>
       </div>
     </section>

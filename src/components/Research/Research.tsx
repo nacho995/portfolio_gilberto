@@ -1,61 +1,38 @@
 import { motion } from 'framer-motion'
 import { FileText, ExternalLink, Award, TrendingUp } from 'lucide-react'
+import { useLanguage } from '@hooks/useLanguage'
 import './Research.css'
 
-const insights = [
-  {
-    id: '1',
-    type: 'Case Study',
-    title: 'SIFI → Faes Farma: A Strategic Acquisition Case Study',
-    description: 'Análisis profundo de la estrategia de M&A que resultó en una adquisición exitosa de €XXX millones.',
-    category: 'M&A Strategy',
-    featured: true,
-    size: 'large',
-  },
-  {
-    id: '2',
-    type: 'White Paper',
-    title: 'Post-Merger Integration in Pharmaceutical Industry',
-    description: 'Metodología para PMI exitosa en sectores altamente regulados.',
-    category: 'Integration',
-    featured: true,
-    size: 'medium',
-  },
-  {
-    id: '3',
-    type: 'Industry Insight',
-    title: 'Global Expansion Strategies in MedTech',
-    description: 'Framework para entrada a mercados emergentes en dispositivos médicos.',
-    category: 'Strategy',
-    size: 'medium',
-  },
-  {
-    id: '4',
-    type: 'Thought Leadership',
-    title: 'Transforming Life Sciences Organizations',
-    description: 'Principios de liderazgo transformacional aplicados a pharma y biotech.',
-    category: 'Leadership',
-    size: 'small',
-  },
-  {
-    id: '5',
-    type: 'Case Study',
-    title: 'Leading Multi-Cultural Teams Across 4 Continents',
-    description: 'Lecciones de liderazgo global en entornos complejos.',
-    category: 'Leadership',
-    size: 'small',
-  },
-  {
-    id: '6',
-    type: 'Framework',
-    title: 'Board Advisory Best Practices',
-    description: 'Modelo de gobierno corporativo para juntas directivas en Life Sciences.',
-    category: 'Governance',
-    size: 'small',
-  },
-]
-
 const Research = () => {
+  const { t } = useLanguage()
+
+  const insights = [
+    {
+      id: '1',
+      key: 'transformation' as const,
+      featured: true,
+      size: 'large',
+    },
+    {
+      id: '2',
+      key: 'mna' as const,
+      featured: true,
+      size: 'medium',
+    },
+    {
+      id: '3',
+      key: 'emerging' as const,
+      featured: false,
+      size: 'medium',
+    },
+    {
+      id: '4',
+      key: 'leadership' as const,
+      featured: false,
+      size: 'small',
+    },
+  ]
+
   return (
     <section id="research" className="research">
       <div className="research-container">
@@ -66,10 +43,8 @@ const Research = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-display">Research & Thought Leadership</h2>
-          <p className="text-body">
-            Contribuciones académicas y insights estratégicos basados en experiencia ejecutiva real
-          </p>
+          <h2 className="text-display">{t.research.title}</h2>
+          <p className="text-body">{t.research.subtitle}</p>
         </motion.div>
 
         <div className="bento-grid">
@@ -86,23 +61,27 @@ const Research = () => {
               {insight.featured && (
                 <div className="featured-badge">
                   <Award size={16} />
-                  Featured
+                  {t.research.featured}
                 </div>
               )}
 
               <div className="insight-type">
                 <FileText size={20} />
-                {insight.type}
+                {t.research.papers[insight.key].category}
               </div>
 
-              <h3 className="insight-title">{insight.title}</h3>
-              <p className="insight-description">{insight.description}</p>
+              <h3 className="insight-title">{t.research.papers[insight.key].title}</h3>
+              <p className="insight-description">{t.research.papers[insight.key].description}</p>
 
               <div className="insight-footer">
-                <span className="insight-category">{insight.category}</span>
+                <div className="insight-tags">
+                  {t.research.papers[insight.key].tags.map((tag: string, idx: number) => (
+                    <span key={idx} className="insight-tag">{tag}</span>
+                  ))}
+                </div>
                 <button className="insight-read">
                   <ExternalLink size={18} />
-                  Read More
+                  {t.research.viewFull}
                 </button>
               </div>
 

@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion'
-import { GraduationCap, Award, Globe, Languages } from 'lucide-react'
+import { GraduationCap, Award } from 'lucide-react'
+import { useLanguage } from '@hooks/useLanguage'
 import './Education.css'
 
 const Education = () => {
+  const { t } = useLanguage()
+
   return (
     <section id="education" className="education">
       <div className="education-container">
@@ -13,10 +16,8 @@ const Education = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-display">Formación & Credenciales</h2>
-          <p className="text-body">
-            Sólida base académica combinada con experiencia ejecutiva internacional
-          </p>
+          <h2 className="text-display">{t.education.title}</h2>
+          <p className="text-body">{t.education.subtitle}</p>
         </motion.div>
 
         <div className="education-grid">
@@ -30,16 +31,34 @@ const Education = () => {
             <div className="education-icon">
               <GraduationCap size={36} />
             </div>
-            <h3 className="education-title">Farmacéutico y Bioquímico</h3>
-            <p className="education-institution">Universidad de Buenos Aires</p>
+            <h3 className="education-title">{t.education.degrees.biochemistry.degree}</h3>
+            <p className="education-institution">{t.education.degrees.biochemistry.institution}</p>
             <div className="education-distinction">
               <Award size={18} />
-              <span>Suma Cum Laude</span>
+              <span>{t.education.degrees.biochemistry.honor}</span>
             </div>
-            <p className="education-description">
-              Formación técnica y científica que fundamenta el conocimiento profundo de la industria
-              farmacéutica y ciencias de la vida.
-            </p>
+            <p className="education-location">{t.education.degrees.biochemistry.location}</p>
+            <p className="education-description">{t.education.degrees.biochemistry.description}</p>
+          </motion.div>
+
+          <motion.div
+            className="education-card"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <div className="education-icon">
+              <GraduationCap size={36} />
+            </div>
+            <h3 className="education-title">{t.education.degrees.pharmacy.degree}</h3>
+            <p className="education-institution">{t.education.degrees.pharmacy.institution}</p>
+            <div className="education-distinction">
+              <Award size={18} />
+              <span>{t.education.degrees.pharmacy.honor}</span>
+            </div>
+            <p className="education-location">{t.education.degrees.pharmacy.location}</p>
+            <p className="education-description">{t.education.degrees.pharmacy.description}</p>
           </motion.div>
 
           <motion.div
@@ -52,54 +71,13 @@ const Education = () => {
             <div className="education-icon">
               <Award size={36} />
             </div>
-            <h3 className="education-title">Executive Education</h3>
-            <p className="education-institution">London Business School</p>
-            <p className="education-focus">Seminarios Ejecutivos en Finanzas</p>
-            <p className="education-description">
-              Formación complementaria en gestión financiera y estrategia empresarial de una de las
-              escuelas de negocios más prestigiosas del mundo.
-            </p>
+            <h3 className="education-title">{t.education.degrees.business.degree}</h3>
+            <p className="education-institution">{t.education.degrees.business.institution}</p>
+            <p className="education-focus">{t.education.degrees.business.program}</p>
+            <p className="education-location">{t.education.degrees.business.location}</p>
+            <p className="education-description">{t.education.degrees.business.description}</p>
           </motion.div>
         </div>
-
-        <div className="education-additional">
-          <motion.div
-            className="additional-card"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <Globe size={28} />
-            <h4>Experiencia Internacional</h4>
-            <p>Europa • LATAM • Asia • MENA (Middle East & North Africa)</p>
-          </motion.div>
-
-          <motion.div
-            className="additional-card"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <Languages size={28} />
-            <h4>Idiomas</h4>
-            <p>Español (Nativo) • Inglés (Profesional) • Francés (Básico)</p>
-          </motion.div>
-        </div>
-
-        <motion.div
-          className="education-highlight"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <blockquote>
-            "La combinación de formación técnica farmacéutica con visión estratégica de negocios
-            permite una comprensión integral de los desafíos en ciencias de la vida."
-          </blockquote>
-        </motion.div>
       </div>
     </section>
   )
