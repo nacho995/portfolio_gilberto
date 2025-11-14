@@ -174,20 +174,31 @@
 
 .world-map-container {
   position: relative;
-  height: 600px;
-  margin-bottom: var(--spacing-xl);
-  border-radius: 24px;
+  height: 700px;
+  margin: var(--spacing-xl) 0;
+  border-radius: 32px;
   overflow: hidden;
+  box-shadow: 
+    0 20px 60px rgba(11, 61, 145, 0.12),
+    0 8px 24px rgba(0, 133, 111, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .world-map-background {
   position: absolute;
   inset: 0;
   background: 
-    linear-gradient(135deg, rgba(11, 61, 145, 0.05), rgba(0, 133, 111, 0.05)),
-    url('data:image/svg+xml,<svg width="1000" height="600" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(11,61,145,0.1)" stroke-width="1"/></pattern></defs><rect width="1000" height="600" fill="url(%23grid)"/></svg>');
+    /* Overlay sutil */
+    linear-gradient(135deg, rgba(11, 61, 145, 0.03), rgba(0, 133, 111, 0.03)),
+    /* Mapa visual con continentes */
+    url('data:image/svg+xml,<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(11,61,145,0.08)" stroke-width="0.5"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/><g opacity="0.25" fill="rgba(11,61,145,0.15)"><ellipse cx="550" cy="180" rx="140" ry="100" /><ellipse cx="280" cy="320" rx="90" ry="120" /><ellipse cx="540" cy="350" rx="70" ry="90" /><ellipse cx="850" cy="250" rx="180" ry="130" /><ellipse cx="1020" cy="380" rx="100" ry="80" /></g></svg>'),
+    /* Base clara */
+    linear-gradient(to bottom, rgba(250, 251, 252, 0.95), rgba(245, 247, 250, 0.95));
   border-radius: 24px;
-  border: 2px solid var(--color-neutral-300);
+  border: 2px solid rgba(11, 61, 145, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(11, 61, 145, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .region-pin {
@@ -198,8 +209,8 @@
 }
 
 .pin-marker {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background: var(--gradient-primary);
   border-radius: 50% 50% 50% 0;
   transform: rotate(-45deg);
@@ -207,8 +218,29 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: var(--shadow-lg);
-  animation: pulsePrestige 2s ease-in-out infinite;
+  box-shadow: 
+    0 8px 32px rgba(11, 61, 145, 0.6),
+    0 4px 16px rgba(0, 133, 111, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  animation: pinPulse 2s ease-in-out infinite;
+}
+
+@keyframes pinPulse {
+  0%, 100% {
+    transform: rotate(-45deg) scale(1);
+    box-shadow: 
+      0 8px 32px rgba(11, 61, 145, 0.6),
+      0 4px 16px rgba(0, 133, 111, 0.4),
+      inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.1);
+    box-shadow: 
+      0 12px 40px rgba(11, 61, 145, 0.8),
+      0 6px 20px rgba(0, 133, 111, 0.6),
+      inset 0 2px 4px rgba(255, 255, 255, 0.5);
+  }
 }
 
 .pin-marker svg {
