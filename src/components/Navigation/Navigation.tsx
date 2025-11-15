@@ -30,9 +30,16 @@ const Navigation = () => {
   }, [])
 
   const handleNavClick = (href: string) => {
+    // Cerrar menú inmediatamente
     setIsOpen(false)
-    const element = document.querySelector(href)
-    element?.scrollIntoView({ behavior: 'smooth' })
+    
+    // Pequeño delay para que se cierre el menú antes de hacer scroll
+    setTimeout(() => {
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }, 100)
   }
 
   return (
