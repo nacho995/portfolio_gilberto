@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ChevronDown, Linkedin } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { useLanguage } from '@hooks/useLanguage'
 import ScientificParticles from './ScientificParticles'
 import StatsCounter from './StatsCounter'
@@ -7,7 +7,7 @@ import './Hero.css'
 
 const Hero = () => {
   const { t } = useLanguage()
-  
+
   const scrollToValue = () => {
     document.querySelector('#value-proposition')?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -24,11 +24,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.3 }}
           >
             <div className="hero-image-wrapper glass-academic">
-              <img 
-                src="/gilberto.png" 
-                alt="Gilberto Dalesio Delpini" 
-                className="hero-image"
-              />
+              <img src="/gilberto.jpeg" alt="Gilberto Dalesio Delpini" className="hero-image" />
               <div className="academic-halo"></div>
             </div>
           </motion.div>
@@ -47,44 +43,50 @@ const Hero = () => {
             >
               {t.hero.name}
             </motion.h1>
-          
-          <motion.p
-            className="hero-subtitle"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-          >
-            {t.hero.subtitle}
-          </motion.p>
 
-          <motion.p
-            className="hero-tagline text-body"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-          >
-            {t.hero.tagline}
-          </motion.p>
-
-          <motion.div
-            className="hero-cta"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
-          >
-            <button 
-              className="cta-primary" 
-              onClick={() => window.open('https://www.linkedin.com/in/gilbertodalesio/', '_blank')}
+            <motion.p
+              className="hero-subtitle"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
             >
-              <Linkedin size={20} />
-              {t.hero.ctaPrimary}
-            </button>
-            <button className="cta-secondary" onClick={() => window.open('#contact', '_self')}>
-              {t.hero.ctaSecondary}
-            </button>
-          </motion.div>
-          
-          <StatsCounter />
+              {t.hero.subtitle}
+            </motion.p>
+
+            <motion.p
+              className="hero-tagline text-body"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+            >
+              {t.hero.tagline}
+            </motion.p>
+
+            <motion.div
+              className="hero-cta"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1 }}
+            >
+              <button
+                className="cta-primary"
+                onClick={() =>
+                  document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+                }
+              >
+                {t.hero.ctaPrimary}
+              </button>
+              <button
+                className="cta-secondary"
+                onClick={() =>
+                  document.querySelector('#teaching')?.scrollIntoView({ behavior: 'smooth' })
+                }
+              >
+                {t.hero.ctaSecondary}
+              </button>
+            </motion.div>
+
+            <StatsCounter />
           </motion.div>
         </div>
 
@@ -104,4 +106,3 @@ const Hero = () => {
 }
 
 export default Hero
-

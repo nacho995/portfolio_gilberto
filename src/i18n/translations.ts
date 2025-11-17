@@ -11,10 +11,11 @@ export const translations = {
     },
     hero: {
       name: 'Gilberto Dalesio Delpini',
-      subtitle: 'Líder Ejecutivo Global | Transformación en Ciencias de la Vida y MedTech',
-      tagline: '30+ años impulsando transformación, crecimiento y creación de valor sostenible en farmacéuticas y ciencias de la vida a nivel global',
-      ctaPrimary: 'Conectar en LinkedIn',
-      ctaSecondary: 'Consultoría Ejecutiva',
+      subtitle: 'Experto en Estrategia, M&A y Liderazgo en Life Sciences',
+      tagline:
+        '40+ años de experiencia ejecutiva global en Life Sciences aplicada a la formación de futuros líderes empresariales',
+      ctaPrimary: 'Oportunidades Académicas',
+      ctaSecondary: 'Ver Experiencia Docente',
       stats: {
         years: 'Años de Experiencia',
         continents: 'Continentes',
@@ -24,23 +25,28 @@ export const translations = {
     },
     valueProposition: {
       title: 'Propuesta de Valor',
-      subtitle: 'Cuatro décadas de liderazgo ejecutivo transformando organizaciones globales en ciencias de la vida',
+      subtitle:
+        'Cuatro décadas de liderazgo ejecutivo transformando organizaciones globales en ciencias de la vida',
       pillars: {
         transformation: {
           title: 'Transformación Estratégica',
-          description: 'Liderazgo en procesos de cambio organizacional que generan valor sostenible y alinean personas con objetivos de negocio.',
+          description:
+            'Liderazgo en procesos de cambio organizacional que generan valor sostenible y alinean personas con objetivos de negocio.',
         },
         mna: {
           title: 'Liderazgo en M&A',
-          description: 'Experiencia comprobada en fusiones, adquisiciones e integración post-fusión en sectores altamente regulados.',
+          description:
+            'Experiencia comprobada en fusiones, adquisiciones e integración post-fusión en sectores altamente regulados.',
         },
         expansion: {
           title: 'Expansión Global',
-          description: 'Gestión de operaciones internacionales en 4 continentes con responsabilidad P&L y desarrollo de nuevos mercados.',
+          description:
+            'Gestión de operaciones internacionales a nivel global con responsabilidad P&L y desarrollo de nuevos mercados.',
         },
         governance: {
           title: 'Gobernanza Corporativa',
-          description: 'Asesoría estratégica a juntas directivas y alta dirección en toma de decisiones críticas y gobierno empresarial.',
+          description:
+            'Asesoría estratégica a juntas directivas y alta dirección en toma de decisiones críticas y gobierno empresarial.',
         },
       },
     },
@@ -75,15 +81,18 @@ export const translations = {
       },
     },
     teaching: {
-      title: 'Experiencia Docente',
-      subtitle: 'Formación de la próxima generación de líderes en ciencias de la vida',
-      intro: 'Combino décadas de experiencia ejecutiva con pasión por la educación, ofreciendo perspectivas prácticas del mundo real a estudiantes de MBA y programas ejecutivos.',
-      coursesTitle: 'Cursos Impartidos',
+      title: 'Experiencia Docente Universitaria',
+      subtitle:
+        '40+ años de experiencia ejecutiva en estrategia de negocios, M&A y transformación organizacional en Life Sciences',
+      intro:
+        'Experiencia docente universitaria (1981-1988) como Profesor Auxiliar en Universidad de Buenos Aires. Combino formación científica (Bioquímico y Farmacéutico) con 40+ años de experiencia ejecutiva en negocios, ofreciendo perspectivas prácticas en estrategia empresarial, M&A y transformación organizacional para programas MBA y Executive Education.',
+      coursesTitle: 'Cursos Especializados',
       courses: {
         strategic: {
           title: 'Gestión Estratégica en Ciencias de la Vida',
           institution: 'Programas Executive MBA',
-          description: 'Estrategias de transformación, innovación y crecimiento en la industria farmacéutica y de dispositivos médicos.',
+          description:
+            'Estrategias de transformación, innovación y crecimiento en la industria farmacéutica y de dispositivos médicos.',
           syllabus: 'Ver Syllabus',
           topics: [
             'Análisis de la industria farmacéutica global',
@@ -96,7 +105,8 @@ export const translations = {
         mna: {
           title: 'Fusiones & Adquisiciones en Healthcare',
           institution: 'Programas de Finanzas Corporativas',
-          description: 'Due diligence, valuación, negociación e integración post-fusión en sectores regulados.',
+          description:
+            'Due diligence, valuación, negociación e integración post-fusión en sectores regulados.',
           syllabus: 'Ver Syllabus',
           topics: [
             'Valoración de empresas farmacéuticas',
@@ -109,154 +119,167 @@ export const translations = {
         international: {
           title: 'Negocios Internacionales',
           institution: 'Programas de Gestión Global',
-          description: 'Estrategias de entrada a mercados, gestión multicultural y operaciones globales.',
+          description:
+            'Estrategias de entrada a mercados, gestión multicultural y operaciones globales.',
           syllabus: 'Ver Syllabus',
           topics: [
             'Análisis de mercados emergentes',
             'Estrategias de entrada internacional',
             'Gestión de equipos multiculturales',
             'Adaptación de productos a mercados locales',
-            'Casos: Expansión exitosa en 4 continentes',
+            'Casos: Expansión exitosa global',
           ],
         },
       },
     },
     experience: {
       title: 'Trayectoria Ejecutiva',
-      subtitle: 'Tres décadas liderando transformaciones en organizaciones globales de ciencias de la vida',
+      subtitle:
+        'Cuatro décadas liderando transformaciones en organizaciones globales de ciencias de la vida',
       viewDetails: 'Ver Detalles',
       hideDetails: 'Ocultar',
       positions: {
-        alcon: {
-          company: 'Alcon (Novartis)',
-          role: 'Chief Commercial Officer - MENA Region',
-          period: '2015 - 2019',
-          description: 'Lideré la estrategia comercial para Medio Oriente, Norte de África y mercados estratégicos, gestionando un P&L de múltiples divisiones de productos oftalmológicos.',
-          achievements: [
-            'Gestión de P&L multimillonario en portfolio de productos quirúrgicos y vision care',
-            'Expansión exitosa en 15+ mercados emergentes de alto crecimiento',
-            'Liderazgo de equipo multicultural de 200+ profesionales',
-            'Implementación de transformación digital en toda la región',
-            'Crecimiento de doble dígito en categorías clave',
-          ],
-        },
         sifi: {
-          company: 'SIFI Group',
-          role: 'Chief Executive Officer',
-          period: '2010 - 2015',
-          description: 'CEO de grupo farmacéutico especializado en oftalmología, liderando la transformación estratégica y posicionamiento para adquisición exitosa.',
+          company: 'SIFI S.p.A.',
+          role: 'Chief Commercial Officer',
+          period: 'Mayo 2017 - Presente',
+          description:
+            'Dirección comercial, marketing y desarrollo de negocios alineados con objetivos estratégicos de ventas y P&L. Liderazgo de expansión global y transformación digital.',
           achievements: [
-            'Transformación estratégica completa de la organización',
-            'Reposicionamiento de portafolio de productos',
-            'Expansión internacional en mercados clave de Europa y LatAm',
-            'Due diligence y negociación de venta exitosa a Faes Farma',
-            'Implementación de excelencia operacional y comercial',
+            'Dirección de plan estratégico a largo plazo para ventas y rentabilidad',
+            'Liderazgo de expansión global mediante nuevas filiales, adquisiciones y joint ventures',
+            'Mejora de resultados con partners existentes y apertura de nuevos mercados',
+            'Dirección de transformación digital de experiencia del cliente en funciones comerciales',
           ],
         },
-        bausch: {
-          company: 'Bausch + Lomb',
-          role: 'VP Commercial Operations - Latin America',
-          period: '2005 - 2010',
-          description: 'Responsable de operaciones comerciales en toda Latinoamérica, gestionando múltiples unidades de negocio y transformación regional.',
+        alcon_vp: {
+          company: 'Alcon (Novartis)',
+          role: 'Area Vice-President, EURMEA',
+          period: 'Marzo 2008 - Marzo 2015',
+          description:
+            'Gestión de operaciones en tres continentes con más de 1,000 empleados. Responsabilidad P&L completa en todas las unidades de negocio.',
           achievements: [
-            'Gestión de operaciones en 12 países latinoamericanos',
-            'Liderazgo en integración post-adquisición de múltiples empresas',
-            'Implementación de estrategia go-to-market unificada',
-            'Desarrollo de talento y capacidades organizacionales',
-            'Crecimiento sostenido en todas las categorías de producto',
+            'Liderazgo de ventas de $1.1B con CAGR promedio de 15%',
+            'Reestructuración de Rusia: incremento de ingresos de $60M (2008) a $232M (2012)',
+            'Reorganización de Medio Oriente en un solo cluster',
+            'Creación de Centro de Excelencia para Cáucaso y Asia Central, duplicando ventas cada 2 años',
+            'Liderazgo estratégico en integración de sistemas ERP basados en SAP tras fusión Alcon-Novartis',
           ],
         },
-        earlier: {
-          company: 'Posiciones Anteriores',
-          role: 'Roles de Liderazgo Progresivo',
-          period: '1990 - 2005',
-          description: 'Trayectoria ascendente en roles de creciente responsabilidad en ventas, marketing y dirección general.',
+        alcon_marketing: {
+          company: 'Alcon (Novartis)',
+          role: 'Area Marketing Director, EURMEA',
+          period: 'Enero 2000 - Febrero 2008',
+          description:
+            'Crecimiento de doble dígito durante 8 años consecutivos. Creación del primer departamento de marketing regional de Alcon.',
           achievements: [
-            'Director General en múltiples empresas farmacéuticas',
-            'Director Comercial en mercados estratégicos',
-            'Liderazgo de lanzamientos de productos exitosos',
-            'Desarrollo de estrategias de crecimiento orgánico',
-            'Gestión de equipos de alto desempeño',
+            'CAGR de 12% alcanzando ventas históricas de $1B en EURMEA',
+            'Reestructuración de equipos de marketing y ventas: EBITDA de -14% a +35% en 12 meses',
+            'Gestión de ciclo de vida completo de productos en todas las unidades de negocio',
+            'Co-desarrollo del primer CRM internacional de la compañía basado en Siebel',
+          ],
+        },
+        alcon_earlier: {
+          company: 'Alcon',
+          role: 'Posiciones de Liderazgo Progresivo',
+          period: '1991 - 2000',
+          description:
+            'Progresión rápida desde representante de ventas hasta roles directivos en España, Argentina y funciones internacionales.',
+          achievements: [
+            'Division Director, España (1991-1996): Crecimiento de ventas del -5% al 64% en división óptica',
+            'Marketing Manager, Internacional (1996-1998): Lanzamiento de múltiples productos a nivel mundial',
+            'Business Unit Manager, Argentina (1999): Modelo global de CRM y procesos de ventas',
+            'Mentor de colegas de mercados emergentes (Brasil, Taiwan)',
           ],
         },
       },
     },
     globalImpact: {
       title: 'Impacto Global',
-      subtitle: 'Experiencia ejecutiva en cuatro continentes transformando mercados y organizaciones',
-      intro: 'Mi carrera me ha llevado a liderar operaciones y transformaciones en diversos mercados globales, aportando perspectivas multiculturales únicas.',
+      subtitle: 'Liderazgo en Europa, Oriente Medio, Asia Central y Latinoamérica',
+      intro:
+        'Mi carrera me ha llevado a liderar operaciones en 4 regiones estratégicas: Europa (30+ años), Oriente Medio (7+ años), Asia Central y Cáucaso (7+ años), y Latinoamérica (18+ años), gestionando equipos multiculturales de más de 1,000 personas.',
       regions: {
         europe: {
           title: 'Europa',
-          years: '15+ años',
+          years: '30+ años',
           description: 'Liderazgo de operaciones en mercados europeos clave',
           highlights: [
-            'Gestión de filiales en Italia, España, Francia',
-            'Integración post-M&A de múltiples empresas',
-            'Lanzamientos de productos pan-europeos',
+            'Gestión de filiales en Italia, España, Francia, Suiza',
+            'CCO en SIFI Group (Italia) - Presente',
+            'Area VP y Marketing Director en Alcon EURMEA',
+            'Ventas de $1B+ y crecimiento sostenido de doble dígito',
           ],
         },
-        mena: {
-          title: 'Medio Oriente y África',
-          years: '8+ años',
-          description: 'CCO de región MENA para Alcon (Novartis)',
+        middle_east: {
+          title: 'Oriente Medio',
+          years: '7+ años',
+          description: 'Reestructuración y transformación organizacional',
           highlights: [
-            'Gestión de 15+ mercados diversos',
-            'Crecimiento de doble dígito sostenido',
-            'Desarrollo de talento local',
+            'Reorganización de Oriente Medio en un solo cluster',
+            'Parte de responsabilidad EURMEA como Area VP',
+            'Implementación de estrategias de crecimiento regional',
+            'Gestión de equipos multiculturales',
+          ],
+        },
+        central_asia: {
+          title: 'Asia Central y Cáucaso',
+          years: '7+ años',
+          description: 'Centro de Excelencia y expansión rápida',
+          highlights: [
+            'Creación de Centro de Excelencia para Cáucaso y Asia Central',
+            'Duplicación de ventas regionales cada 2 años',
+            'Desarrollo de nuevos mercados emergentes',
+            'Liderazgo como parte de EURMEA en Alcon',
           ],
         },
         latam: {
           title: 'Latinoamérica',
-          years: '20+ años',
-          description: 'Múltiples roles de liderazgo regional',
+          years: '18+ años',
+          description: 'Inicio de carrera y desarrollo profesional',
           highlights: [
-            'VP para toda Latinoamérica en Bausch + Lomb',
-            'Director General en Argentina',
-            'Expansión en mercados emergentes',
-          ],
-        },
-        asia: {
-          title: 'Asia-Pacífico',
-          years: '5+ años',
-          description: 'Proyectos estratégicos y desarrollo de mercado',
-          highlights: [
-            'Estrategias de entrada en mercados asiáticos',
-            'Partnerships estratégicos',
-            'Due diligence para M&A',
+            'Business Unit Manager Argentina - Alcon',
+            'Division Director España (base para Latinoamérica)',
+            'Profesor Universitario en UBA (1981-1988)',
+            'Desarrollo de modelo global de CRM desde Argentina',
           ],
         },
       },
     },
     research: {
       title: 'Investigación y Liderazgo de Pensamiento',
-      subtitle: 'Contribuciones al conocimiento en estrategia, M&A y transformación en ciencias de la vida',
+      subtitle:
+        'Contribuciones al conocimiento en estrategia, M&A y transformación en ciencias de la vida',
       featured: 'Destacado',
       viewFull: 'Ver Completo',
       papers: {
+        leadership: {
+          title: 'Liderazgo Ejecutivo en Organizaciones Globales',
+          category: 'Liderazgo Ejecutivo',
+          description:
+            'Mejores prácticas para liderar equipos diversos en contextos multiculturales, maximizando el potencial de talento global y alineando personas con objetivos de negocio.',
+          tags: ['Liderazgo', 'Gestión Multicultural', 'Talento'],
+        },
         transformation: {
-          title: 'Transformación Digital en Ciencias de la Vida',
-          category: 'Estrategia Digital',
-          description: 'Marco integral para liderar la transformación digital en organizaciones farmacéuticas y de dispositivos médicos, equilibrando innovación con cumplimiento regulatorio.',
-          tags: ['Transformación Digital', 'Healthcare', 'Innovación'],
+          title: 'Transformación Organizacional en Ciencias de la Vida',
+          category: 'Transformación Empresarial',
+          description:
+            'Marco integral para liderar procesos de transformación en organizaciones farmacéuticas y de dispositivos médicos, equilibrando innovación con cumplimiento regulatorio.',
+          tags: ['Transformación', 'Cambio Organizacional', 'Estrategia'],
         },
         mna: {
           title: 'M&A Exitosas en Sectores Regulados',
           category: 'Fusiones & Adquisiciones',
-          description: 'Análisis de factores críticos de éxito en M&A de healthcare, incluyendo due diligence regulatorio, integración cultural y captura de sinergias.',
+          description:
+            'Análisis de factores críticos de éxito en M&A de healthcare, incluyendo due diligence regulatorio, integración cultural y captura de sinergias.',
           tags: ['M&A', 'Due Diligence', 'Integración'],
         },
         emerging: {
           title: 'Estrategias de Expansión en Mercados Emergentes',
           category: 'Negocios Internacionales',
-          description: 'Guía práctica para entrada y expansión en mercados emergentes de alto potencial, basada en experiencia en 4 continentes.',
+          description:
+            'Guía práctica para entrada y expansión en mercados emergentes de alto potencial, basada en experiencia global.',
           tags: ['Expansión Internacional', 'Mercados Emergentes', 'Estrategia'],
-        },
-        leadership: {
-          title: 'Liderazgo Multicultural en Organizaciones Globales',
-          category: 'Liderazgo Ejecutivo',
-          description: 'Mejores prácticas para liderar equipos diversos en contextos multiculturales, maximizando el potencial de talento global.',
-          tags: ['Liderazgo', 'Gestión Multicultural', 'Talento'],
         },
       },
     },
@@ -269,32 +292,38 @@ export const translations = {
           honor: 'Suma Cum Laude',
           institution: 'Universidad de Buenos Aires',
           location: 'Buenos Aires, Argentina',
-          description: 'Formación científica rigurosa en bioquímica y ciencias moleculares, base fundamental para comprender la industria farmacéutica y biotecnológica.',
+          description:
+            'Formación científica rigurosa en bioquímica y ciencias moleculares, base fundamental para comprender la industria farmacéutica y biotecnológica.',
         },
         pharmacy: {
           degree: 'Licenciatura en Farmacia',
           honor: 'Suma Cum Laude',
           institution: 'Universidad de Buenos Aires',
           location: 'Buenos Aires, Argentina',
-          description: 'Especialización en ciencias farmacéuticas, regulación y desarrollo de productos farmacéuticos.',
+          description:
+            'Especialización en ciencias farmacéuticas, regulación y desarrollo de productos farmacéuticos.',
         },
         business: {
           degree: 'Executive Education',
           program: 'Programas de Liderazgo Ejecutivo',
           institution: 'London Business School',
           location: 'Londres, Reino Unido',
-          description: 'Formación ejecutiva avanzada en estrategia, finanzas corporativas y liderazgo global.',
+          description:
+            'Formación ejecutiva avanzada en estrategia, finanzas corporativas y liderazgo global.',
         },
       },
     },
     consulting: {
       title: 'Servicios de Consultoría',
-      subtitle: 'Asesoría estratégica para juntas directivas y equipos ejecutivos en ciencias de la vida',
-      intro: 'Ofrezco consultoría ejecutiva especializada basada en 30+ años de experiencia liderando transformaciones, M&A y expansión global en la industria farmacéutica y de dispositivos médicos.',
+      subtitle:
+        'Asesoría estratégica para juntas directivas y equipos ejecutivos en ciencias de la vida',
+      intro:
+        'Ofrezco consultoría ejecutiva especializada basada en 40+ años de experiencia liderando transformaciones, M&A y expansión global en la industria farmacéutica y de dispositivos médicos.',
       services: {
         board: {
           title: 'Asesoría de Juntas Directivas',
-          description: 'Consejero independiente o asesor estratégico para juntas de empresas de healthcare y ciencias de la vida.',
+          description:
+            'Consejero independiente o asesor estratégico para juntas de empresas de healthcare y ciencias de la vida.',
           deliverables: [
             'Perspectiva estratégica independiente',
             'Due diligence de operaciones M&A',
@@ -304,7 +333,8 @@ export const translations = {
         },
         transformation: {
           title: 'Transformación Empresarial',
-          description: 'Liderazgo de programas de cambio organizacional y transformación estratégica.',
+          description:
+            'Liderazgo de programas de cambio organizacional y transformación estratégica.',
           deliverables: [
             'Diagnóstico organizacional completo',
             'Diseño de estrategia de transformación',
@@ -314,7 +344,8 @@ export const translations = {
         },
         mna: {
           title: 'M&A y Desarrollo Corporativo',
-          description: 'Apoyo en todo el ciclo de fusiones, adquisiciones e integraciones post-fusión.',
+          description:
+            'Apoyo en todo el ciclo de fusiones, adquisiciones e integraciones post-fusión.',
           deliverables: [
             'Identificación de targets estratégicos',
             'Due diligence comercial y operacional',
@@ -335,23 +366,27 @@ export const translations = {
       },
     },
     contact: {
-      title: 'Consultoría Ejecutiva',
-      subtitle: '¿Su organización enfrenta desafíos estratégicos en expansión, transformación o M&A? Conversemos sobre cómo mi experiencia puede aportar valor a su junta directiva o equipo ejecutivo.',
+      title: 'Oportunidades Académicas',
+      subtitle:
+        '¿Busca un profesor con experiencia ejecutiva real en Life Sciences? Conversemos sobre cómo mis 40+ años de experiencia global pueden enriquecer sus programas MBA y Executive Education.',
       connectTitle: 'Conectar',
-      connectText: 'Disponible para asesoría estratégica a juntas directivas, consultoría en transformación empresarial y oportunidades de liderazgo ejecutivo en ciencias de la vida.',
+      connectText:
+        'Disponible para posiciones de profesor/lecturer en programas de MBA, Executive Education y postgrados en Estrategia, M&A, Transformación Organizacional y Negocios Internacionales.',
       form: {
         name: 'Nombre Completo',
         namePlaceholder: 'Nombre y apellido',
-        email: 'Email Corporativo',
-        emailPlaceholder: 'email@empresa.com',
-        message: 'Consulta',
-        messagePlaceholder: 'Describa brevemente el desafío estratégico o la oportunidad de consultoría...',
-        submit: 'Enviar Consulta',
+        email: 'Email Institucional',
+        emailPlaceholder: 'email@universidad.edu',
+        message: 'Descripción de la Oportunidad',
+        messagePlaceholder:
+          'Describa el programa académico, cursos de interés y detalles de la posición docente...',
+        submit: 'Enviar Solicitud',
         sending: 'Enviando...',
         success: '¡Mensaje enviado exitosamente! Te contactaré pronto.',
         error: 'Error al enviar. Por favor intenta de nuevo o contacta directamente por LinkedIn.',
       },
-      footer: '© 2024 Gilberto Dalesio Delpini. Consultoría Ejecutiva y Asesoría de Juntas.',
+      footer:
+        '© 2024 Gilberto Dalesio Delpini. Profesor Universitario | Life Sciences Strategy & Leadership.',
     },
   },
   en: {
@@ -366,10 +401,11 @@ export const translations = {
     },
     hero: {
       name: 'Gilberto Dalesio Delpini',
-      subtitle: 'Global Executive Leader | Life Sciences & MedTech Transformation',
-      tagline: '30+ years driving transformation, growth and sustainable value creation in pharmaceuticals and life sciences at a global level',
-      ctaPrimary: 'Connect on LinkedIn',
-      ctaSecondary: 'Executive Consulting',
+      subtitle: 'Expert in Strategy, M&A and Leadership in Life Sciences',
+      tagline:
+        '40+ years of global executive experience in Life Sciences applied to training future business leaders',
+      ctaPrimary: 'Academic Opportunities',
+      ctaSecondary: 'View Teaching Experience',
       stats: {
         years: 'Years of Experience',
         continents: 'Continents',
@@ -379,23 +415,28 @@ export const translations = {
     },
     valueProposition: {
       title: 'Value Proposition',
-      subtitle: 'Four decades of executive leadership transforming global organizations in life sciences',
+      subtitle:
+        'Four decades of executive leadership transforming global organizations in life sciences',
       pillars: {
         transformation: {
           title: 'Strategic Transformation',
-          description: 'Leadership in organizational change processes that generate sustainable value and align people with business objectives.',
+          description:
+            'Leadership in organizational change processes that generate sustainable value and align people with business objectives.',
         },
         mna: {
           title: 'M&A Leadership',
-          description: 'Proven experience in mergers, acquisitions and post-merger integration in highly regulated sectors.',
+          description:
+            'Proven experience in mergers, acquisitions and post-merger integration in highly regulated sectors.',
         },
         expansion: {
           title: 'Global Expansion',
-          description: 'Management of international operations across 4 continents with P&L responsibility and new market development.',
+          description:
+            'Management of international operations globally with P&L responsibility and new market development.',
         },
         governance: {
           title: 'Corporate Governance',
-          description: 'Strategic advisory to boards of directors and senior management in critical decision-making and corporate governance.',
+          description:
+            'Strategic advisory to boards of directors and senior management in critical decision-making and corporate governance.',
         },
       },
     },
@@ -430,15 +471,18 @@ export const translations = {
       },
     },
     teaching: {
-      title: 'Teaching Experience',
-      subtitle: 'Training the next generation of life sciences leaders',
-      intro: 'I combine decades of executive experience with a passion for education, offering practical real-world insights to MBA and executive program students.',
-      coursesTitle: 'Courses Taught',
+      title: 'University Teaching Experience',
+      subtitle:
+        '40+ years of executive experience in business strategy, M&A and organizational transformation in Life Sciences',
+      intro:
+        'University teaching experience (1981-1988) as Graduate Teaching Assistant at Universidad de Buenos Aires. I combine scientific training (Biochemist and Pharmacist) with 40+ years of executive experience in business, offering practical insights in business strategy, M&A and organizational transformation for MBA and Executive Education programs.',
+      coursesTitle: 'Specialized Courses',
       courses: {
         strategic: {
           title: 'Strategic Management in Life Sciences',
           institution: 'Executive MBA Programs',
-          description: 'Transformation, innovation and growth strategies in pharmaceutical and medical device industry.',
+          description:
+            'Transformation, innovation and growth strategies in pharmaceutical and medical device industry.',
           syllabus: 'View Syllabus',
           topics: [
             'Global pharmaceutical industry analysis',
@@ -451,7 +495,8 @@ export const translations = {
         mna: {
           title: 'Mergers & Acquisitions in Healthcare',
           institution: 'Corporate Finance Programs',
-          description: 'Due diligence, valuation, negotiation and post-merger integration in regulated sectors.',
+          description:
+            'Due diligence, valuation, negotiation and post-merger integration in regulated sectors.',
           syllabus: 'View Syllabus',
           topics: [
             'Pharmaceutical company valuation',
@@ -471,114 +516,120 @@ export const translations = {
             'International entry strategies',
             'Multicultural team management',
             'Product adaptation to local markets',
-            'Cases: Successful expansion across 4 continents',
+            'Cases: Successful global expansion',
           ],
         },
       },
     },
     experience: {
       title: 'Executive Career',
-      subtitle: 'Three decades leading transformations in global life sciences organizations',
+      subtitle: 'Four decades leading transformations in global life sciences organizations',
       viewDetails: 'View Details',
       hideDetails: 'Hide',
       positions: {
-        alcon: {
-          company: 'Alcon (Novartis)',
-          role: 'Chief Commercial Officer - MENA Region',
-          period: '2015 - 2019',
-          description: 'Led commercial strategy for Middle East, North Africa and strategic markets, managing multi-division P&L for ophthalmic products.',
-          achievements: [
-            'Multi-million P&L management across surgical and vision care portfolio',
-            'Successful expansion in 15+ high-growth emerging markets',
-            'Leadership of multicultural team of 200+ professionals',
-            'Digital transformation implementation across the region',
-            'Double-digit growth in key categories',
-          ],
-        },
         sifi: {
-          company: 'SIFI Group',
-          role: 'Chief Executive Officer',
-          period: '2010 - 2015',
-          description: 'CEO of pharmaceutical group specialized in ophthalmology, leading strategic transformation and positioning for successful acquisition.',
+          company: 'SIFI S.p.A.',
+          role: 'Chief Commercial Officer',
+          period: 'May 2017 - Present',
+          description:
+            'Drive commercial, marketing, and business development aligned with strategic sales and P&L objectives. Lead global expansion and digital transformation.',
           achievements: [
-            'Complete strategic transformation of the organization',
-            'Product portfolio repositioning',
-            'International expansion in key European and LatAm markets',
-            'Due diligence and successful sale negotiation to Faes Farma',
-            'Operational and commercial excellence implementation',
+            'Strategic leadership of long-term sales and profitability plan',
+            'Lead global expansion through new subsidiaries, acquisitions, and joint ventures',
+            'Enhanced results with existing partners and new market development',
+            'Head global digital customer experience transformation for commercial functions',
           ],
         },
-        bausch: {
-          company: 'Bausch + Lomb',
-          role: 'VP Commercial Operations - Latin America',
-          period: '2005 - 2010',
-          description: 'Responsible for commercial operations across Latin America, managing multiple business units and regional transformation.',
+        alcon_vp: {
+          company: 'Alcon (Novartis)',
+          role: 'Area Vice-President, EURMEA',
+          period: 'March 2008 - March 2015',
+          description:
+            'Managed operations across three continents with over 1,000 employees. Full P&L responsibility across all business units.',
           achievements: [
-            'Operations management in 12 Latin American countries',
-            'Leadership in post-acquisition integration of multiple companies',
-            'Unified go-to-market strategy implementation',
-            'Talent development and organizational capabilities',
-            'Sustained growth across all product categories',
+            'Led area sales of $1.1B achieving 15% average CAGR',
+            'Restructured Russia: grew revenue from $60M (2008) to $232M (2012)',
+            'Reorganized Middle East into single cluster',
+            'Established Centre of Excellence for Caucasus and Central Asia, doubling sales every 2 years',
+            'Strategic leadership in SAP-based ERP integration post Alcon-Novartis merger',
           ],
         },
-        earlier: {
-          company: 'Earlier Positions',
-          role: 'Progressive Leadership Roles',
-          period: '1990 - 2005',
-          description: 'Ascending career in roles of increasing responsibility in sales, marketing and general management.',
+        alcon_marketing: {
+          company: 'Alcon (Novartis)',
+          role: 'Area Marketing Director, EURMEA',
+          period: 'January 2000 - February 2008',
+          description:
+            "Double-digit growth for 8 consecutive years. Established Alcon's first regional marketing department.",
           achievements: [
-            'General Manager at multiple pharmaceutical companies',
-            'Commercial Director in strategic markets',
-            'Leadership of successful product launches',
-            'Organic growth strategies development',
-            'High-performance team management',
+            '12% CAGR reaching historic sales of $1B in EURMEA',
+            'Restructured marketing and sales teams: EBITDA from -14% to +35% in 12 months',
+            'Managed entire product lifecycle across all business units',
+            "Co-developed company's first international CRM system based on Siebel",
+          ],
+        },
+        alcon_earlier: {
+          company: 'Alcon',
+          role: 'Progressive Leadership Positions',
+          period: '1991 - 2000',
+          description:
+            'Fast-track progression from sales representative to executive roles across Spain, Argentina, and international functions.',
+          achievements: [
+            'Division Director, Spain (1991-1996): Sales growth from -5% to 64% in optical division',
+            'Marketing Manager, International (1996-1998): Global multi-product launches',
+            'Business Unit Manager, Argentina (1999): Global CRM and sales process model',
+            'Mentored emerging market colleagues (Brazil, Taiwan)',
           ],
         },
       },
     },
     globalImpact: {
       title: 'Global Impact',
-      subtitle: 'Executive experience across four continents transforming markets and organizations',
-      intro: 'My career has taken me to lead operations and transformations in diverse global markets, bringing unique multicultural perspectives.',
+      subtitle: 'Leadership in Europe, Middle East, Central Asia and Latin America',
+      intro:
+        'My career has taken me to lead operations in 4 strategic regions: Europe (30+ years), Middle East (7+ years), Central Asia & Caucasus (7+ years), and Latin America (18+ years), managing multicultural teams of over 1,000 people.',
       regions: {
         europe: {
           title: 'Europe',
-          years: '15+ years',
+          years: '30+ years',
           description: 'Operations leadership in key European markets',
           highlights: [
-            'Subsidiary management in Italy, Spain, France',
-            'Post-M&A integration of multiple companies',
-            'Pan-European product launches',
+            'Subsidiary management in Italy, Spain, France, Switzerland',
+            'CCO at SIFI Group (Italy) - Present',
+            'Area VP and Marketing Director at Alcon EURMEA',
+            '$1B+ sales and sustained double-digit growth',
           ],
         },
-        mena: {
-          title: 'Middle East & Africa',
-          years: '8+ years',
-          description: 'CCO of MENA region for Alcon (Novartis)',
+        middle_east: {
+          title: 'Middle East',
+          years: '7+ years',
+          description: 'Restructuring and organizational transformation',
           highlights: [
-            'Management of 15+ diverse markets',
-            'Sustained double-digit growth',
-            'Local talent development',
+            'Reorganized Middle East into single cluster',
+            'Part of EURMEA responsibility as Area VP',
+            'Implementation of regional growth strategies',
+            'Multicultural team management',
+          ],
+        },
+        central_asia: {
+          title: 'Central Asia & Caucasus',
+          years: '7+ years',
+          description: 'Centre of Excellence and rapid expansion',
+          highlights: [
+            'Established Centre of Excellence for Caucasus and Central Asia',
+            'Doubled regional sales every 2 years',
+            'New emerging markets development',
+            'Leadership as part of EURMEA at Alcon',
           ],
         },
         latam: {
           title: 'Latin America',
-          years: '20+ years',
-          description: 'Multiple regional leadership roles',
+          years: '18+ years',
+          description: 'Career start and professional development',
           highlights: [
-            'VP for all Latin America at Bausch + Lomb',
-            'General Manager in Argentina',
-            'Emerging markets expansion',
-          ],
-        },
-        asia: {
-          title: 'Asia-Pacific',
-          years: '5+ years',
-          description: 'Strategic projects and market development',
-          highlights: [
-            'Entry strategies in Asian markets',
-            'Strategic partnerships',
-            'M&A due diligence',
+            'Business Unit Manager Argentina - Alcon',
+            'Division Director Spain (base for Latin America)',
+            'University Professor at UBA (1981-1988)',
+            'Developed global CRM model from Argentina',
           ],
         },
       },
@@ -589,29 +640,33 @@ export const translations = {
       featured: 'Featured',
       viewFull: 'View Full',
       papers: {
+        leadership: {
+          title: 'Executive Leadership in Global Organizations',
+          category: 'Executive Leadership',
+          description:
+            'Best practices for leading diverse teams in multicultural contexts, maximizing global talent potential and aligning people with business objectives.',
+          tags: ['Leadership', 'Multicultural Management', 'Talent'],
+        },
         transformation: {
-          title: 'Digital Transformation in Life Sciences',
-          category: 'Digital Strategy',
-          description: 'Comprehensive framework for leading digital transformation in pharmaceutical and medical device organizations, balancing innovation with regulatory compliance.',
-          tags: ['Digital Transformation', 'Healthcare', 'Innovation'],
+          title: 'Organizational Transformation in Life Sciences',
+          category: 'Business Transformation',
+          description:
+            'Comprehensive framework for leading transformation processes in pharmaceutical and medical device organizations, balancing innovation with regulatory compliance.',
+          tags: ['Transformation', 'Organizational Change', 'Strategy'],
         },
         mna: {
           title: 'Successful M&A in Regulated Sectors',
           category: 'Mergers & Acquisitions',
-          description: 'Analysis of critical success factors in healthcare M&A, including regulatory due diligence, cultural integration and synergy capture.',
+          description:
+            'Analysis of critical success factors in healthcare M&A, including regulatory due diligence, cultural integration and synergy capture.',
           tags: ['M&A', 'Due Diligence', 'Integration'],
         },
         emerging: {
           title: 'Expansion Strategies in Emerging Markets',
           category: 'International Business',
-          description: 'Practical guide for entry and expansion in high-potential emerging markets, based on experience across 4 continents.',
+          description:
+            'Practical guide for entry and expansion in high-potential emerging markets, based on global experience.',
           tags: ['International Expansion', 'Emerging Markets', 'Strategy'],
-        },
-        leadership: {
-          title: 'Multicultural Leadership in Global Organizations',
-          category: 'Executive Leadership',
-          description: 'Best practices for leading diverse teams in multicultural contexts, maximizing global talent potential.',
-          tags: ['Leadership', 'Multicultural Management', 'Talent'],
         },
       },
     },
@@ -624,32 +679,37 @@ export const translations = {
           honor: 'Summa Cum Laude',
           institution: 'University of Buenos Aires',
           location: 'Buenos Aires, Argentina',
-          description: 'Rigorous scientific training in biochemistry and molecular sciences, fundamental foundation for understanding pharmaceutical and biotechnology industry.',
+          description:
+            'Rigorous scientific training in biochemistry and molecular sciences, fundamental foundation for understanding pharmaceutical and biotechnology industry.',
         },
         pharmacy: {
           degree: 'Bachelor in Pharmacy',
           honor: 'Summa Cum Laude',
           institution: 'University of Buenos Aires',
           location: 'Buenos Aires, Argentina',
-          description: 'Specialization in pharmaceutical sciences, regulation and pharmaceutical product development.',
+          description:
+            'Specialization in pharmaceutical sciences, regulation and pharmaceutical product development.',
         },
         business: {
           degree: 'Executive Education',
           program: 'Executive Leadership Programs',
           institution: 'London Business School',
           location: 'London, United Kingdom',
-          description: 'Advanced executive training in strategy, corporate finance and global leadership.',
+          description:
+            'Advanced executive training in strategy, corporate finance and global leadership.',
         },
       },
     },
     consulting: {
       title: 'Consulting Services',
       subtitle: 'Strategic advisory for boards and executive teams in life sciences',
-      intro: 'I offer specialized executive consulting based on 30+ years of experience leading transformations, M&A and global expansion in the pharmaceutical and medical device industry.',
+      intro:
+        'I offer specialized executive consulting based on 40+ years of experience leading transformations, M&A and global expansion in the pharmaceutical and medical device industry.',
       services: {
         board: {
           title: 'Board Advisory',
-          description: 'Independent director or strategic advisor for healthcare and life sciences company boards.',
+          description:
+            'Independent director or strategic advisor for healthcare and life sciences company boards.',
           deliverables: [
             'Independent strategic perspective',
             'M&A operations due diligence',
@@ -669,7 +729,8 @@ export const translations = {
         },
         mna: {
           title: 'M&A and Corporate Development',
-          description: 'Support throughout the cycle of mergers, acquisitions and post-merger integrations.',
+          description:
+            'Support throughout the cycle of mergers, acquisitions and post-merger integrations.',
           deliverables: [
             'Strategic target identification',
             'Commercial and operational due diligence',
@@ -690,23 +751,27 @@ export const translations = {
       },
     },
     contact: {
-      title: 'Executive Consulting',
-      subtitle: 'Does your organization face strategic challenges in expansion, transformation or M&A? Let\'s discuss how my experience can add value to your board or executive team.',
+      title: 'Academic Opportunities',
+      subtitle:
+        "Looking for a lecturer with real executive experience in Life Sciences? Let's discuss how my 40+ years of global experience can enrich your MBA and Executive Education programs.",
       connectTitle: 'Connect',
-      connectText: 'Available for strategic board advisory, business transformation consulting and executive leadership opportunities in life sciences.',
+      connectText:
+        'Available for lecturer/professor positions in MBA, Executive Education and postgraduate programs in Strategy, M&A, Organizational Transformation and International Business.',
       form: {
         name: 'Full Name',
         namePlaceholder: 'First and last name',
-        email: 'Corporate Email',
-        emailPlaceholder: 'email@company.com',
-        message: 'Inquiry',
-        messagePlaceholder: 'Briefly describe the strategic challenge or consulting opportunity...',
-        submit: 'Send Inquiry',
+        email: 'Institutional Email',
+        emailPlaceholder: 'email@university.edu',
+        message: 'Opportunity Description',
+        messagePlaceholder:
+          'Describe the academic program, courses of interest and teaching position details...',
+        submit: 'Send Application',
         sending: 'Sending...',
         success: 'Message sent successfully! I will contact you soon.',
         error: 'Error sending. Please try again or contact directly via LinkedIn.',
       },
-      footer: '© 2024 Gilberto Dalesio Delpini. Executive Consulting & Board Advisory.',
+      footer:
+        '© 2024 Gilberto Dalesio Delpini. University Lecturer | Life Sciences Strategy & Leadership.',
     },
   },
 }

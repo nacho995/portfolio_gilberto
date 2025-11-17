@@ -8,37 +8,43 @@
   overflow: hidden;
   background: 
     /* Capa 1: Resplandor dorado central sutil - corona de excelencia */
-    radial-gradient(ellipse 1000px 800px at 50% 30%, 
+    radial-gradient(
+      ellipse 1000px 800px at 50% 30%,
       rgba(212, 175, 55, 0.12) 0%,
       rgba(230, 201, 104, 0.06) 40%,
-      transparent 70%),
+      transparent 70%
+    ),
     /* Capa 2: Aura azul profundo - autoridad */
-    radial-gradient(ellipse 900px 750px at 20% 20%, 
-      rgba(11, 61, 145, 0.14) 0%,
-      rgba(21, 87, 176, 0.07) 45%,
-      transparent 70%),
+      radial-gradient(
+        ellipse 900px 750px at 20% 20%,
+        rgba(11, 61, 145, 0.14) 0%,
+        rgba(21, 87, 176, 0.07) 45%,
+        transparent 70%
+      ),
     /* Capa 3: Verde esmeralda - Life Sciences */
-    radial-gradient(ellipse 850px 700px at 80% 80%, 
-      rgba(0, 133, 111, 0.12) 0%,
-      rgba(0, 163, 137, 0.06) 45%,
-      transparent 70%),
+      radial-gradient(
+        ellipse 850px 700px at 80% 80%,
+        rgba(0, 133, 111, 0.12) 0%,
+        rgba(0, 163, 137, 0.06) 45%,
+        transparent 70%
+      ),
     /* Capa 4: Gradiente diagonal sutil */
-    linear-gradient(135deg, 
-      rgba(11, 61, 145, 0.08) 0%,
-      rgba(0, 133, 111, 0.06) 50%,
-      rgba(212, 175, 55, 0.04) 100%),
+      linear-gradient(
+        135deg,
+        rgba(11, 61, 145, 0.08) 0%,
+        rgba(0, 133, 111, 0.06) 50%,
+        rgba(212, 175, 55, 0.04) 100%
+      ),
     /* Capa 5: Overlay de luz brillante */
-    radial-gradient(circle at 50% 40%, 
-      rgba(255, 255, 255, 0.98) 0%,
-      rgba(250, 251, 252, 0.95) 60%,
-      rgba(245, 247, 250, 0.97) 100%),
-    /* Capa 6: Base premium clara */
-    linear-gradient(180deg, 
-      #FAFBFC 0%,
-      #FFFFFF 50%,
-      #F5F7FA 100%);
+      radial-gradient(
+        circle at 50% 40%,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(250, 251, 252, 0.95) 60%,
+        rgba(245, 247, 250, 0.97) 100%
+      ),
+    /* Capa 6: Base premium clara */ linear-gradient(180deg, #fafbfc 0%, #ffffff 50%, #f5f7fa 100%);
   animation: heroMajestic 35s ease-in-out infinite;
-  background-size: 
+  background-size:
     1000px 800px,
     900px 750px,
     850px 700px,
@@ -48,20 +54,21 @@
 }
 
 @keyframes heroMajestic {
-  0%, 100% {
-    background-position: 
-      50% 30%, 
-      20% 20%, 
-      80% 80%, 
+  0%,
+  100% {
+    background-position:
+      50% 30%,
+      20% 20%,
+      80% 80%,
       0% 0%,
       50% 40%,
       0% 0%;
   }
   50% {
-    background-position: 
-      55% 35%, 
-      25% 25%, 
-      75% 75%, 
+    background-position:
+      55% 35%,
+      25% 25%,
+      75% 75%,
       100% 100%,
       60% 50%,
       0% 0%;
@@ -74,26 +81,24 @@
   inset: 0;
   background: 
     /* Mesh grid científico sutil */
-    repeating-linear-gradient(0deg,
+    repeating-linear-gradient(
+      0deg,
       transparent,
       transparent 80px,
       rgba(11, 61, 145, 0.02) 80px,
-      rgba(11, 61, 145, 0.02) 81px),
-    repeating-linear-gradient(90deg,
+      rgba(11, 61, 145, 0.02) 81px
+    ),
+    repeating-linear-gradient(
+      90deg,
       transparent,
       transparent 80px,
       rgba(0, 133, 111, 0.02) 80px,
-      rgba(0, 133, 111, 0.02) 81px),
+      rgba(0, 133, 111, 0.02) 81px
+    ),
     /* Puntos de prestigio sutiles */
-    radial-gradient(circle 300px at 15% 20%, 
-      rgba(212, 175, 55, 0.08) 0%, 
-      transparent 70%),
-    radial-gradient(circle 280px at 85% 85%, 
-      rgba(0, 133, 111, 0.10) 0%,
-      transparent 70%),
-    radial-gradient(circle 250px at 70% 40%, 
-      rgba(11, 61, 145, 0.07) 0%,
-      transparent 70%);
+      radial-gradient(circle 300px at 15% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 70%),
+    radial-gradient(circle 280px at 85% 85%, rgba(0, 133, 111, 0.1) 0%, transparent 70%),
+    radial-gradient(circle 250px at 70% 40%, rgba(11, 61, 145, 0.07) 0%, transparent 70%);
   opacity: 1;
   z-index: 0;
   animation: meshMajestic 50s linear infinite;
@@ -101,14 +106,20 @@
 
 @keyframes meshMajestic {
   0% {
-    background-position: 
-      0% 0%, 0% 0%,
-      15% 20%, 85% 85%, 70% 40%;
+    background-position:
+      0% 0%,
+      0% 0%,
+      15% 20%,
+      85% 85%,
+      70% 40%;
   }
   100% {
-    background-position: 
-      80px 80px, 80px 80px,
-      25% 30%, 75% 75%, 60% 50%;
+    background-position:
+      80px 80px,
+      80px 80px,
+      25% 30%,
+      75% 75%,
+      60% 50%;
   }
 }
 
@@ -120,7 +131,7 @@
   right: 0;
   height: 3px;
   background: var(--gradient-academic);
-  box-shadow: 
+  box-shadow:
     0 -6px 30px rgba(212, 175, 55, 0.4),
     0 -2px 10px rgba(0, 133, 111, 0.3),
     inset 0 1px 2px rgba(255, 255, 255, 0.5);
@@ -147,7 +158,8 @@
 }
 
 @keyframes floatParticle {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
     opacity: 0.3;
   }
@@ -177,7 +189,7 @@
 /* Layout con foto */
 .hero-layout {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 470px 1fr;
   gap: var(--spacing-xl);
   align-items: center;
   max-width: 1400px;
@@ -191,12 +203,12 @@
 
 .hero-image-wrapper {
   position: relative;
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
+  width: 450px;
+  height: 540px;
+  border-radius: 20px;
   overflow: hidden;
   border: 4px solid rgba(212, 175, 55, 0.3);
-  box-shadow: 
+  box-shadow:
     0 20px 60px rgba(11, 61, 145, 0.3),
     0 10px 30px rgba(212, 175, 55, 0.2),
     inset 0 2px 4px rgba(255, 255, 255, 0.3);
@@ -206,7 +218,7 @@
 .hero-image-wrapper:hover {
   transform: scale(1.05);
   border-color: rgba(212, 175, 55, 0.6);
-  box-shadow: 
+  box-shadow:
     0 25px 80px rgba(11, 61, 145, 0.4),
     0 15px 40px rgba(212, 175, 55, 0.3),
     0 0 60px rgba(212, 175, 55, 0.4),
@@ -223,11 +235,13 @@
 .academic-halo {
   position: absolute;
   inset: -20px;
-  border-radius: 50%;
-  background: radial-gradient(circle,
+  border-radius: 20px;
+  background: radial-gradient(
+    circle,
     rgba(212, 175, 55, 0.3) 0%,
     rgba(212, 175, 55, 0.1) 50%,
-    transparent 70%);
+    transparent 70%
+  );
   filter: blur(20px);
   opacity: 0;
   transition: opacity var(--transition-base);
@@ -252,8 +266,8 @@
   }
 
   .hero-image-wrapper {
-    width: 320px;
-    height: 320px;
+    width: 360px;
+    height: 432px;
     margin: 0 auto;
   }
 
@@ -351,7 +365,8 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
   50% {
@@ -382,4 +397,3 @@
     text-align: center;
   }
 }
-

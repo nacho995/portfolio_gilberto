@@ -3,67 +3,85 @@
   padding: var(--spacing-xl) var(--spacing-lg);
   background: 
     /* Capa 1: Europa - Azul corporate */
-    radial-gradient(ellipse 950px 750px at 48% 25%, 
+    radial-gradient(
+      ellipse 950px 750px at 48% 25%,
       rgba(11, 61, 145, 0.22) 0%,
       rgba(21, 87, 176, 0.13) 35%,
       rgba(30, 106, 189, 0.06) 65%,
-      transparent 80%),
+      transparent 80%
+    ),
     /* Capa 2: Asia - Verde growth */
-    radial-gradient(ellipse 900px 700px at 75% 35%, 
-      rgba(0, 133, 111, 0.20) 0%,
-      rgba(0, 163, 137, 0.12) 35%,
-      rgba(27, 153, 139, 0.05) 65%,
-      transparent 80%),
+      radial-gradient(
+        ellipse 900px 700px at 75% 35%,
+        rgba(0, 133, 111, 0.2) 0%,
+        rgba(0, 163, 137, 0.12) 35%,
+        rgba(27, 153, 139, 0.05) 65%,
+        transparent 80%
+      ),
     /* Capa 3: LATAM - Dorado heritage */
-    radial-gradient(ellipse 850px 650px at 22% 60%, 
-      rgba(212, 175, 55, 0.18) 0%,
-      rgba(230, 201, 104, 0.10) 35%,
-      rgba(255, 215, 0, 0.04) 65%,
-      transparent 80%),
+      radial-gradient(
+        ellipse 850px 650px at 22% 60%,
+        rgba(212, 175, 55, 0.18) 0%,
+        rgba(230, 201, 104, 0.1) 35%,
+        rgba(255, 215, 0, 0.04) 65%,
+        transparent 80%
+      ),
     /* Capa 4: MENA - Burgundy tradition */
-    radial-gradient(circle 700px at 58% 40%, 
-      rgba(139, 0, 0, 0.12) 0%,
-      rgba(165, 42, 42, 0.06) 45%,
-      transparent 75%),
+      radial-gradient(
+        circle 700px at 58% 40%,
+        rgba(139, 0, 0, 0.12) 0%,
+        rgba(165, 42, 42, 0.06) 45%,
+        transparent 75%
+      ),
     /* Capa 5: África - Silver opportunity */
-    radial-gradient(circle 600px at 50% 75%, 
-      rgba(192, 192, 192, 0.10) 0%,
-      rgba(211, 211, 211, 0.05) 50%,
-      transparent 75%),
+      radial-gradient(
+        circle 600px at 50% 75%,
+        rgba(192, 192, 192, 0.1) 0%,
+        rgba(211, 211, 211, 0.05) 50%,
+        transparent 75%
+      ),
     /* Capa 6: Rutas comerciales */
-    repeating-linear-gradient(60deg,
-      transparent,
-      transparent 160px,
-      rgba(0, 133, 111, 0.018) 160px,
-      rgba(0, 133, 111, 0.018) 161px),
-    repeating-linear-gradient(-60deg,
+      repeating-linear-gradient(
+        60deg,
+        transparent,
+        transparent 160px,
+        rgba(0, 133, 111, 0.018) 160px,
+        rgba(0, 133, 111, 0.018) 161px
+      ),
+    repeating-linear-gradient(
+      -60deg,
       transparent,
       transparent 160px,
       rgba(11, 61, 145, 0.016) 160px,
-      rgba(11, 61, 145, 0.016) 161px),
+      rgba(11, 61, 145, 0.016) 161px
+    ),
     /* Capa 7: Red de mercados */
-    repeating-linear-gradient(30deg,
-      transparent,
-      transparent 135px,
-      rgba(212, 175, 55, 0.014) 135px,
-      rgba(212, 175, 55, 0.014) 136px),
+      repeating-linear-gradient(
+        30deg,
+        transparent,
+        transparent 135px,
+        rgba(212, 175, 55, 0.014) 135px,
+        rgba(212, 175, 55, 0.014) 136px
+      ),
     /* Capa 8: Pins globales */
-    radial-gradient(circle 6px at 48% 25%, rgba(11, 61, 145, 0.6), transparent),
+      radial-gradient(circle 6px at 48% 25%, rgba(11, 61, 145, 0.6), transparent),
     radial-gradient(circle 6px at 75% 35%, rgba(0, 133, 111, 0.6), transparent),
     radial-gradient(circle 5px at 22% 60%, rgba(212, 175, 55, 0.6), transparent),
     radial-gradient(circle 5px at 58% 40%, rgba(139, 0, 0, 0.5), transparent),
     radial-gradient(circle 4px at 50% 75%, rgba(192, 192, 192, 0.5), transparent),
     /* Capa 9: Base mundial premium */
-    linear-gradient(140deg, 
-      rgba(248, 249, 250, 1) 0%,
-      rgba(255, 255, 255, 0.97) 20%,
-      rgba(250, 251, 252, 0.94) 40%,
-      rgba(245, 247, 250, 0.96) 60%,
-      rgba(248, 249, 250, 0.98) 80%,
-      rgba(255, 255, 255, 1) 100%);
+      linear-gradient(
+        140deg,
+        rgba(248, 249, 250, 1) 0%,
+        rgba(255, 255, 255, 0.97) 20%,
+        rgba(250, 251, 252, 0.94) 40%,
+        rgba(245, 247, 250, 0.96) 60%,
+        rgba(248, 249, 250, 0.98) 80%,
+        rgba(255, 255, 255, 1) 100%
+      );
   position: relative;
   animation: globalRadiance 52s ease-in-out infinite;
-  background-size: 
+  background-size:
     950px 750px,
     900px 700px,
     850px 650px,
@@ -81,25 +99,56 @@
 }
 
 @keyframes globalRadiance {
-  0%, 100% {
-    background-position: 
-      48% 25%, 75% 35%, 22% 60%, 58% 40%, 50% 75%,
-      0 0, 0 0, 0 0,
-      48% 25%, 75% 35%, 22% 60%, 58% 40%, 50% 75%,
+  0%,
+  100% {
+    background-position:
+      48% 25%,
+      75% 35%,
+      22% 60%,
+      58% 40%,
+      50% 75%,
+      0 0,
+      0 0,
+      0 0,
+      48% 25%,
+      75% 35%,
+      22% 60%,
+      58% 40%,
+      50% 75%,
       0 0;
   }
   33% {
-    background-position: 
-      52% 30%, 70% 40%, 26% 55%, 62% 35%, 55% 70%,
-      53px 53px, 53px 53px, 45px 45px,
-      52% 30%, 70% 40%, 26% 55%, 62% 35%, 55% 70%,
+    background-position:
+      52% 30%,
+      70% 40%,
+      26% 55%,
+      62% 35%,
+      55% 70%,
+      53px 53px,
+      53px 53px,
+      45px 45px,
+      52% 30%,
+      70% 40%,
+      26% 55%,
+      62% 35%,
+      55% 70%,
       0 0;
   }
   66% {
-    background-position: 
-      44% 30%, 80% 40%, 18% 65%, 54% 45%, 45% 80%,
-      106px 106px, 106px 106px, 90px 90px,
-      44% 30%, 80% 40%, 18% 65%, 54% 45%, 45% 80%,
+    background-position:
+      44% 30%,
+      80% 40%,
+      18% 65%,
+      54% 45%,
+      45% 80%,
+      106px 106px,
+      106px 106px,
+      90px 90px,
+      44% 30%,
+      80% 40%,
+      18% 65%,
+      54% 45%,
+      45% 80%,
       0 0;
   }
 }
@@ -112,7 +161,7 @@
   right: 0;
   height: 3px;
   background: var(--gradient-academic);
-  box-shadow: 
+  box-shadow:
     0 5px 35px rgba(11, 61, 145, 0.5),
     0 3px 18px rgba(0, 133, 111, 0.4),
     inset 0 1px 2px rgba(255, 255, 255, 0.7);
@@ -125,12 +174,14 @@
   left: 10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle,
+  background: radial-gradient(
+    circle,
     rgba(0, 133, 111, 0.15) 0%,
-    rgba(0, 163, 137, 0.10) 25%,
+    rgba(0, 163, 137, 0.1) 25%,
     rgba(27, 153, 139, 0.06) 50%,
     rgba(212, 175, 55, 0.04) 75%,
-    transparent 100%);
+    transparent 100%
+  );
   border-radius: 50%;
   filter: blur(120px);
   animation: worldOrb 38s ease-in-out infinite;
@@ -138,7 +189,8 @@
 }
 
 @keyframes worldOrb {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1) rotate(0deg);
     opacity: 0.8;
   }
@@ -174,11 +226,13 @@
 
 .world-map-container {
   position: relative;
-  height: 700px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
   margin: var(--spacing-xl) 0;
   border-radius: 32px;
   overflow: visible;
-  box-shadow: 
+  box-shadow:
     0 20px 60px rgba(11, 61, 145, 0.12),
     0 8px 24px rgba(0, 133, 111, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -186,17 +240,23 @@
 
 .world-map-background {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: 
     /* Overlay sutil para dar tono */
     linear-gradient(135deg, rgba(11, 61, 145, 0.05), rgba(0, 133, 111, 0.05)),
     /* Mapa del mundo real */
-    url('https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg') center/cover no-repeat,
+      url('https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg')
+      center/cover no-repeat,
     /* Fallback si no carga la imagen */
-    linear-gradient(to bottom, rgba(230, 240, 250, 1), rgba(210, 230, 245, 1));
+      linear-gradient(to bottom, rgba(230, 240, 250, 1), rgba(210, 230, 245, 1));
+  background-size: cover;
+  background-position: center;
   border-radius: 32px;
   border: 2px solid rgba(11, 61, 145, 0.2);
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(11, 61, 145, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
   overflow: hidden;
@@ -219,7 +279,7 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(11, 61, 145, 0.6),
     0 4px 16px rgba(0, 133, 111, 0.4),
     inset 0 2px 4px rgba(255, 255, 255, 0.4);
@@ -228,16 +288,17 @@
 }
 
 @keyframes pinPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(-45deg) scale(1);
-    box-shadow: 
+    box-shadow:
       0 8px 32px rgba(11, 61, 145, 0.6),
       0 4px 16px rgba(0, 133, 111, 0.4),
       inset 0 2px 4px rgba(255, 255, 255, 0.4);
   }
   50% {
     transform: rotate(-45deg) scale(1.1);
-    box-shadow: 
+    box-shadow:
       0 12px 40px rgba(11, 61, 145, 0.8),
       0 6px 20px rgba(0, 133, 111, 0.6),
       inset 0 2px 4px rgba(255, 255, 255, 0.5);
@@ -261,7 +322,7 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
   z-index: 100;
-  box-shadow: 
+  box-shadow:
     0 20px 60px rgba(11, 61, 145, 0.25),
     0 8px 24px rgba(0, 0, 0, 0.12);
 }
@@ -330,7 +391,7 @@
 }
 
 .region-tooltip ul li::before {
-  content: "→ ";
+  content: '→ ';
   color: var(--color-secondary);
   font-weight: bold;
   margin-right: 0.25rem;
@@ -338,7 +399,10 @@
 
 .connection-lines {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   opacity: 0.4;
 }
@@ -374,11 +438,43 @@
   }
 
   .world-map-container {
-    height: 400px;
+    padding-bottom: 50%;
+    margin: var(--spacing-lg) 0;
+  }
+
+  .world-map-background {
+    background-position: center center;
+    background-size: cover;
   }
 
   .region-tooltip {
-    width: 220px;
+    width: 240px;
+    font-size: 0.85rem;
+  }
+
+  .pin-marker {
+    width: 45px;
+    height: 45px;
+  }
+
+  .tooltip-icon {
+    font-size: 1.5rem;
   }
 }
 
+@media (max-width: 480px) {
+  .world-map-container {
+    padding-bottom: 50%;
+    margin: var(--spacing-md) 0;
+  }
+
+  .pin-marker {
+    width: 40px;
+    height: 40px;
+  }
+
+  .region-tooltip {
+    width: 200px;
+    font-size: 0.8rem;
+  }
+}

@@ -24,14 +24,14 @@ function App() {
       <Navigation />
       <main>
         <Hero />
-        <ValueProposition />
-        <Expertise />
         <Teaching />
-        <Experience />
-        <GlobalImpact />
         <Research />
-        <Consulting />
+        <Experience />
         <Education />
+        <Expertise />
+        <GlobalImpact />
+        <ValueProposition />
+        <Consulting />
         <Contact />
       </main>
     </div>
@@ -39,4 +39,3 @@ function App() {
 }
 
 export default App
-

@@ -9,9 +9,7 @@ const StatsCounter = () => {
   const { t } = useLanguage()
 
   const stats = [
-    { value: 30, suffix: '+', label: t.hero.stats.years, icon: '🎓' },
-    { value: 4, suffix: '', label: t.hero.stats.continents, icon: '🌍' },
-    { value: 100, suffix: '+', label: t.hero.stats.companies, icon: '🏢' },
+    { value: 40, suffix: '+', label: t.hero.stats.years, icon: '🎓' },
     { value: 500, prefix: '€', suffix: 'M+', label: t.hero.stats.mna, icon: '💼' },
   ]
 
@@ -36,14 +34,7 @@ const StatsCounter = () => {
             <div className="stat-icon">{stat.icon}</div>
             <div className="stat-number">
               {stat.prefix}
-              {isInView && (
-                <CountUp
-                  end={stat.value}
-                  duration={2.5}
-                  separator=","
-                  decimals={0}
-                />
-              )}
+              {isInView && <CountUp end={stat.value} duration={2.5} separator="," decimals={0} />}
               {stat.suffix}
             </div>
             <div className="stat-label">{stat.label}</div>
@@ -55,4 +46,3 @@ const StatsCounter = () => {
 }
 
 export default StatsCounter
-

@@ -13,30 +13,30 @@ const GlobalImpact = () => {
       id: '1',
       key: 'europe' as const,
       icon: '🇪🇺',
-      position: { top: '25%', left: '48%' },
+      position: { top: '16%', left: '48%' },
     },
     {
       id: '2',
-      key: 'mena' as const,
-      icon: '🕌',
-      position: { top: '40%', left: '58%' },
+      key: 'middle_east' as const,
+      icon: '🏝️',
+      position: { top: '32%', left: '59%' },
     },
     {
       id: '3',
-      key: 'latam' as const,
-      icon: '🌎',
-      position: { top: '60%', left: '22%' },
+      key: 'central_asia' as const,
+      icon: '🏔️',
+      position: { top: '25%', left: '66%' },
     },
     {
       id: '4',
-      key: 'asia' as const,
-      icon: '🌏',
-      position: { top: '35%', left: '75%' },
+      key: 'latam' as const,
+      icon: '🌎',
+      position: { top: '65%', left: '28%' },
     },
   ]
 
   return (
-    <section id="global-impact" className="global-impact" ref={ref as any}>
+    <section id="global-impact" className="global-impact" ref={ref}>
       <div className="global-container">
         <motion.div
           className="global-header"
@@ -51,7 +51,7 @@ const GlobalImpact = () => {
 
         <div className="world-map-container">
           <div className="world-map-background"></div>
-          
+
           {regions.map((region, index) => (
             <motion.div
               key={region.id}
@@ -82,9 +82,11 @@ const GlobalImpact = () => {
                   </div>
                 </div>
                 <ul>
-                  {t.globalImpact.regions[region.key].highlights.map((highlight: string, idx: number) => (
-                    <li key={idx}>{highlight}</li>
-                  ))}
+                  {t.globalImpact.regions[region.key].highlights.map(
+                    (highlight: string, idx: number) => (
+                      <li key={idx}>{highlight}</li>
+                    )
+                  )}
                 </ul>
               </div>
             </motion.div>
@@ -136,4 +138,3 @@ const GlobalImpact = () => {
 }
 
 export default GlobalImpact
-

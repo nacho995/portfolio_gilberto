@@ -9,25 +9,25 @@ const Research = () => {
   const insights = [
     {
       id: '1',
-      key: 'transformation' as const,
+      key: 'leadership' as const,
       featured: true,
       size: 'large',
     },
     {
       id: '2',
-      key: 'mna' as const,
+      key: 'transformation' as const,
       featured: true,
       size: 'medium',
     },
     {
       id: '3',
-      key: 'emerging' as const,
+      key: 'mna' as const,
       featured: false,
       size: 'medium',
     },
     {
       id: '4',
-      key: 'leadership' as const,
+      key: 'emerging' as const,
       featured: false,
       size: 'small',
     },
@@ -76,7 +76,9 @@ const Research = () => {
               <div className="insight-footer">
                 <div className="insight-tags">
                   {t.research.papers[insight.key].tags.map((tag: string, idx: number) => (
-                    <span key={idx} className="insight-tag">{tag}</span>
+                    <span key={idx} className="insight-tag">
+                      {tag}
+                    </span>
                   ))}
                 </div>
                 <button className="insight-read">
@@ -99,4 +101,3 @@ const Research = () => {
 }
 
 export default Research
-

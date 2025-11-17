@@ -12,11 +12,11 @@ const Navigation = () => {
 
   const navItems = [
     { label: t.nav.home, href: '#hero' },
-    { label: t.nav.expertise, href: '#expertise' },
     { label: t.nav.teaching, href: '#teaching' },
-    { label: t.nav.experience, href: '#experience' },
-    { label: t.nav.globalImpact, href: '#global-impact' },
     { label: t.nav.research, href: '#research' },
+    { label: t.nav.experience, href: '#experience' },
+    { label: t.nav.expertise, href: '#expertise' },
+    { label: t.nav.globalImpact, href: '#global-impact' },
     { label: t.nav.contact, href: '#contact' },
   ]
 
@@ -32,7 +32,7 @@ const Navigation = () => {
   const handleNavClick = (href: string) => {
     // Cerrar menú inmediatamente
     setIsOpen(false)
-    
+
     // Pequeño delay para que se cierre el menú antes de hacer scroll
     setTimeout(() => {
       const element = document.querySelector(href)
@@ -50,11 +50,7 @@ const Navigation = () => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       <div className="nav-container">
-        <motion.div
-          className="nav-logo"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
+        <motion.div className="nav-logo" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <span>GDD</span>
         </motion.div>
 
@@ -79,11 +75,7 @@ const Navigation = () => {
           <LanguageToggle />
         </div>
 
-        <button
-          className="nav-toggle"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
+        <button className="nav-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -124,4 +116,3 @@ const Navigation = () => {
 }
 
 export default Navigation
-

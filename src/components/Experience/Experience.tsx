@@ -10,38 +10,38 @@ const Experience = () => {
   const experiences: ExperienceType[] = [
     {
       id: '1',
-      title: t.experience.positions.alcon.role,
-      company: t.experience.positions.alcon.company,
-      period: t.experience.positions.alcon.period,
-      description: t.experience.positions.alcon.description,
-      technologies: t.experience.positions.alcon.achievements,
-      current: false,
-    },
-    {
-      id: '2',
       title: t.experience.positions.sifi.role,
       company: t.experience.positions.sifi.company,
       period: t.experience.positions.sifi.period,
       description: t.experience.positions.sifi.description,
       technologies: t.experience.positions.sifi.achievements,
+      current: true,
+    },
+    {
+      id: '2',
+      title: t.experience.positions.alcon_vp.role,
+      company: t.experience.positions.alcon_vp.company,
+      period: t.experience.positions.alcon_vp.period,
+      description: t.experience.positions.alcon_vp.description,
+      technologies: t.experience.positions.alcon_vp.achievements,
       current: false,
     },
     {
       id: '3',
-      title: t.experience.positions.bausch.role,
-      company: t.experience.positions.bausch.company,
-      period: t.experience.positions.bausch.period,
-      description: t.experience.positions.bausch.description,
-      technologies: t.experience.positions.bausch.achievements,
+      title: t.experience.positions.alcon_marketing.role,
+      company: t.experience.positions.alcon_marketing.company,
+      period: t.experience.positions.alcon_marketing.period,
+      description: t.experience.positions.alcon_marketing.description,
+      technologies: t.experience.positions.alcon_marketing.achievements,
       current: false,
     },
     {
       id: '4',
-      title: t.experience.positions.earlier.role,
-      company: t.experience.positions.earlier.company,
-      period: t.experience.positions.earlier.period,
-      description: t.experience.positions.earlier.description,
-      technologies: t.experience.positions.earlier.achievements,
+      title: t.experience.positions.alcon_earlier.role,
+      company: t.experience.positions.alcon_earlier.company,
+      period: t.experience.positions.alcon_earlier.period,
+      description: t.experience.positions.alcon_earlier.description,
+      technologies: t.experience.positions.alcon_earlier.achievements,
       current: false,
     },
   ]
@@ -107,4 +107,3 @@ const Experience = () => {
 }
 
 export default Experience
-
